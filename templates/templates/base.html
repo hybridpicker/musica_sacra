@@ -1,0 +1,45 @@
+{% load i18n static %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  {% if name %}
+  <title>{{ name }}</title>
+  {% endif %}
+  <!-- Viewport Settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <!-- critical CSS -->
+  {% block extra_head %}
+  {% endblock %}
+</head>
+
+<body>
+  <!-- CSS-->
+  <link href="{% static 'css/sacra.css' %}" rel="stylesheet" type="text/css" />
+
+  {% block navbar %}
+  {% endblock %}
+
+  <h2>Coming soon</h2>
+
+
+  
+  {% block body %}
+  {% endblock %}
+
+
+  <div class="footer-section">
+    {% include "templates/footer.html" %}
+  </div>
+
+
+  {% block footer %}
+  {% endblock %}
+
+</script>
+
+</body>
+</body>
+</html>
