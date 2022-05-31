@@ -2,7 +2,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="h-100">
 <head>
   <meta charset="UTF-8">
   {% if name %}
@@ -15,24 +15,41 @@
   {% endblock %}
 </head>
 
-<body>
+<body class="d-flex h-100 text-center text-black bg-white">
   <!-- CSS-->
   <link href="{% static 'css/sacra.css' %}" rel="stylesheet" type="text/css" />
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">Musica Sacra</span>
+      </a>
 
-  {% block navbar %}
-  {% endblock %}
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      </ul>
+    </header>
+    <main class="px-3">
 
-  <h2>Coming soon</h2>
 
 
   
-  {% block body %}
-  {% endblock %}
+{% block body %}
+{% endblock %}
+</main>
 
 
-  <div class="footer-section">
-    {% include "templates/footer.html" %}
-  </div>
+
+
+<footer class="mt-auto text-white-50">
+  {% include "templates/footer.html" %}
+</footer>
+</div>
+
 
 
   {% block footer %}
