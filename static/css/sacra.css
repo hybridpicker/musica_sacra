@@ -1,0 +1,18 @@
+h1, h2, h3{
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+p, a, li, ul, {
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.nav .nav-link{
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}   
+#Log_FMS{
+    width: 10rem;
+}
