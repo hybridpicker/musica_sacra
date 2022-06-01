@@ -34,7 +34,7 @@ header ul.nav-pills{
     width: 10rem;
 }
 footer a img{
-    width: 3rem;
+    width: 2.5rem;
 } 
 footer a{
     margin: 2rem;
@@ -47,4 +47,10 @@ header{
 }
 main{
     margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+footer .copyright{
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
