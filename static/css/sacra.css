@@ -1,0 +1,40 @@
+main h1, main h2{
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+p, a, li, ul{
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.nav .nav-link{
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}   
+.nav a{
+    color: black;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    color: black;
+    background-color: white;
+}
+#Log_FMS{
+    width: 10rem;
+}
+footer a img{
+    width: 3rem;
+} 
+footer a{
+    margin: 2rem;
+}
+header{
+    background: url("/media/bg/header_bg_1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 6.5rem;
+}
+main{
+    margin-top: 10rem;
+}
