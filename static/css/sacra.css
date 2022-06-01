@@ -22,6 +22,14 @@ p, a, li, ul{
     color: black;
     background-color: white;
 }
+header ul.nav-pills{
+    margin-top: 1.5rem;
+}
+@media only screen and (min-width: 768px) {
+    header ul.nav-pills li{
+        margin-right: 2rem;
+    }
+}
 #Log_FMS{
     width: 10rem;
 }
