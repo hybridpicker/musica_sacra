@@ -10,6 +10,12 @@ p, a, li, ul{
     font-style: normal;
     font-size: 1.2rem;
 }
+a:hover{
+    color: #00b0db !important;
+}
+#crossburger:hover circle{
+    fill: #00b0db;
+}
 .nav .nav-link{
     font-family: source-sans-pro, sans-serif;
     font-weight: 700;
@@ -17,6 +23,9 @@ p, a, li, ul{
 }   
 .nav a{
     color: black;
+}
+.nav a:hover{
+    color: white !important;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
     color: black;
@@ -51,6 +60,9 @@ header .mobileSacraNav, header .mobileSacraNav ul.nav{
     left: 2rem;
     width: 4rem;
     height: 4rem;
+}
+#menuIcon > svg{
+    margin-top: 1rem;
 }
 #sacraHamburger{
     display: none;
@@ -106,7 +118,7 @@ footer a{
 header{
     background: url("/media/bg/header_bg_1.png");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: inherit;
     max-height: 6.5rem;
 }
 main{
