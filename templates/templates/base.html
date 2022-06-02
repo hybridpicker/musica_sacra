@@ -23,19 +23,7 @@
 
 <body class="d-flex h-100 text-center text-black bg-white">
   <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
-    <header class="d-flex flex-wrap justify-content-center py-4 mb-4">
-      <a href="/" class="d-flex align-items-center mb-4 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <span class="fs-4">{% include "svg/logo.html" %}</span>
-      </a>
-
-      <ul class="nav nav-pills text-black" style="display: none;">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-      </ul>
-    </header>
+    {% include "templates/navbar.html" %} 
     <main class="px-3 musica-container">
 
 
@@ -51,12 +39,30 @@
   {% include "templates/footer.html" %}
 </div>
 
+<script type="text/javascript">
+  function openNav() {
+      document.getElementById("sacra-nav-mobile-menu").style.display = "block";
+      document.getElementById("navMobileItems").style.display = "block";
+  }
 
+  function closeNav() {
+    document.getElementById("sacra-nav-mobile-menu").style.display = "none";
+    document.getElementById("navMobileItems").style.display = "none";
+  }
 
+  // RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES
+  window.onorientationchange = function() {
+    var orientation = window.orientation;
+    switch(orientation) {
+      case 0:
+      case 90:
+      case -90: window.location.reload();
+      break; }
+  };
+</script>
   {% block footer %}
   {% endblock %}
 
-</script>
 
 </body>
 </body>
