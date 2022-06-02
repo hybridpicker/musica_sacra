@@ -67,7 +67,7 @@ header .mobileSacraNav, header .mobileSacraNav ul.nav{
 #sacraHamburger{
     display: none;
 }
-@media only screen and (max-width: 558px) {
+@media only screen and (max-width: 576px) {
     header ul.nav{
         display:none;
     }
