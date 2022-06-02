@@ -122,8 +122,12 @@ header{
     max-height: 6.5rem;
 }
 main{
-    margin-top: 10rem;
+    margin-top: 6rem;
     margin-bottom: 5rem;
+}
+main p{
+    padding-left: 5%;
+    padding-right: 5%;
 }
 footer .copyright{
     font-family: source-sans-pro, sans-serif;
