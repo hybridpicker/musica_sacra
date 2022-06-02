@@ -25,14 +25,78 @@ p, a, li, ul{
 header ul.nav-pills{
     margin-top: 1.5rem;
 }
+#Logo_FMS{
+    width: 10rem;
+    margin-left: 2rem;
+}
+@media only screen and (max-width: 768px) {
+    #Logo_FMS{
+        margin-left: unset;
+    }
+}
+@media only screen and (max-width: 625px) {
+    #Logo_FMS{
+        width: 8rem;
+    }
+    main.px-3 {
+        margin-top: 4rem;
+    }
+}
+header .mobileSacraNav, header .mobileSacraNav ul.nav{
+    display:none;
+}
+#menuIcon{
+    top: 0;
+    position: absolute;
+    left: 2rem;
+    width: 4rem;
+    height: 4rem;
+}
+#sacraHamburger{
+    display: none;
+}
+@media only screen and (max-width: 558px) {
+    header ul.nav{
+        display:none;
+    }
+    header .mobileSacraNav, header .mobileSacraNav ul.nav{
+        z-index: 100;
+        width: 0;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        background: white;
+        background: #ffffffde;
+        padding-top: 2rem;
+    }
+    .mobileSacraNav ul li{
+        font-size: 1.8rem;
+        margin: 1.5rem;
+    }
+    #sacraHamburger{
+        display: block;
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+    }
+}
+@media only screen and (max-width: 525px) {
+    header.py-4{
+        padding-top: 1rem !important;
+        margin-bottom: 0 !important;
+        height: 6rem;
+    }
+    header ul.nav-pills{
+        margin-top: 0;
+    }
+}
 @media only screen and (min-width: 768px) {
     header ul.nav-pills li{
         margin-right: 2rem;
     }
 }
-#Log_FMS{
-    width: 10rem;
-}
+
 footer a img{
     width: 2.5rem;
 } 

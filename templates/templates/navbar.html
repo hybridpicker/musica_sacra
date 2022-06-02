@@ -1,0 +1,26 @@
+<header class="d-flex flex-wrap justify-content-center py-4 mb-4">
+    <a id="sacraHamburger" onclick="openNav()">
+        {% include "svg/hamburger.html" %}
+    </a>
+    <a href="/" class="d-flex align-items-center mb-4 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <span class="fs-4">{% include "svg/logo.html" %}</span>
+    </a>
+
+    <ul class="nav nav-pills text-black">
+      <li class="nav-item"><a href="#" class="nav-link">Karten</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Gottesdienste</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Karten</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Kontakt</a></li>
+    </ul>
+    <div id="sacra-nav-mobile-menu" class="mobileSacraNav">
+        <ul id="navMobileItems" class="nav nav-pills text-black">
+            <span id="menuIcon" onclick="closeNav()">
+                {% include "svg/crossburger.html" %}
+            </span>
+            <li class="nav-item"><a href="#" class="nav-link">Karten</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Gottesdienste</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Karten</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Kontakt</a></li>
+        </ul>
+        </div>
+  </header>
