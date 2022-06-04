@@ -28,8 +28,8 @@ a:hover{
     color: white !important;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: unset;
 }
 header ul.nav-pills{
     margin-top: 1.5rem;

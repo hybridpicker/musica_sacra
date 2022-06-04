@@ -23,4 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home.views.home, name='home_view'),
+    path('programm/', home.views.program, name='program_view'),
+    path('kontakt/', home.views.contact, name='contact_view'),
+    path('ueber-uns/', home.views.about, name='about_view'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -59,6 +59,12 @@
       case -90: window.location.reload();
       break; }
   };
+
+  // Pathname for Navigation
+  var path = window.location.pathname.slice(1, -1);
+  if (path) {
+    document.getElementById(path).classList.add("active");
+  }
 </script>
   {% block footer %}
   {% endblock %}
