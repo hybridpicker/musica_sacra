@@ -10,6 +10,9 @@ p, a, li, ul{
     font-style: normal;
     font-size: 1.2rem;
 }
+main.musica-container a{
+    color: #00b0db !important;
+}
 a:hover{
     color: #00b0db !important;
 }
@@ -26,6 +29,9 @@ a:hover{
 }
 .nav a:hover{
     color: white !important;
+}
+#sacra-nav-mobile-menu a:hover{
+    color: unset !important;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
     color: white;

@@ -38,7 +38,13 @@
 
   {% include "templates/footer.html" %}
 </div>
-
+<script type="text/javascript">
+    // Pathname for Navigation
+  var path = window.location.pathname.slice(1, -1);
+  if (path) {
+    document.getElementById(path).classList.add("active");
+  }
+</script>
 <script type="text/javascript">
   function openNav() {
       document.getElementById("sacra-nav-mobile-menu").style.display = "block";
@@ -60,11 +66,7 @@
       break; }
   };
 
-  // Pathname for Navigation
-  var path = window.location.pathname.slice(1, -1);
-  if (path) {
-    document.getElementById(path).classList.add("active");
-  }
+
 </script>
   {% block footer %}
   {% endblock %}
