@@ -13,6 +13,9 @@ p, a, li, ul{
 main.musica-container a{
     color: #00b0db !important;
 }
+body > .cover-container{
+    max-width: 2200px;
+}
 a:hover{
     color: #00b0db !important;
 }
@@ -125,7 +128,7 @@ footer a{
     margin: 2rem;
 }
 header{
-    background: url("/media/bg/header_bg_1.png");
+    background: url("/media/bg/header_bg_2.png");
     background-position: center;
     background-repeat: inherit;
     max-height: 6.5rem;
@@ -178,7 +181,7 @@ footer .copyright{
 .sacra-event-title, .sacra-event-venue {
     border-left: 0.15rem #E9E9EA solid; }
   
-.sacra-event-date > h3 {
+.sacra-event-date > h3,{
     text-align: right;
     margin-bottom: 0;
  }
@@ -188,7 +191,8 @@ footer .copyright{
 .sacra-event-title {
     grid-area: sacra-event-title; }
   
-.sacra-event-title > h3 {
+.sacra-event-title > h3,
+.sacra-event-title > h4 {
     text-align: left;
     margin-bottom: 0;
     text-transform: uppercase;
