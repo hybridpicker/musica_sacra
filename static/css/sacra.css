@@ -37,6 +37,9 @@ a:hover{
     color: white;
     background-color: unset;
 }
+#navMobileItems .nav-link.active{
+    color: #00b0db !important;
+}
 header ul.nav-pills{
     margin-top: 1.5rem;
 }

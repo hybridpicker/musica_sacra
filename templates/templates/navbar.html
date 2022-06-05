@@ -7,9 +7,7 @@
     </a>
 
     <ul class="nav nav-pills text-black">
-      <li class="nav-item">
-        <a id="programm" href="{% url 'program_view' %}" class="nav-link {% if request.resolver_match.view_name == 'program_view' %}active{% endif %}">Programm</a>
-      </li>
+      <li class="nav-item"><a id="programm" href="{% url 'program_view' %}" class="nav-link {% if request.resolver_match.view_name == 'program_view' %}active{% endif %}">Programm</a></li>
       <li class="nav-item"><a id="ueber-uns" href="{% url 'about_view' %}" class="nav-link {% if request.resolver_match.view_name == 'about_view' %}active{% endif %}">Über Uns</a></li>
       <li class="nav-item"><a id="kontakt" href="{% url 'contact_view' %}" class="nav-link {% if request.resolver_match.view_name == 'contact_view' %}active{% endif %}">Karten & Kontakt</a></li>
     </ul>
@@ -18,9 +16,9 @@
             <span id="menuIcon" onclick="closeNav()">
                 {% include "svg/crossburger.html" %}
             </span>
-            <li class="nav-item"><a id="programm" href="{% url 'program_view' %}" class="nav-link">Programm</a></li>
-            <li class="nav-item"><a id="ueber-uns" href="{% url 'about_view' %}" class="nav-link">Über Uns</a></li>
-            <li class="nav-item"><a id="kontakt" href="{% url 'contact_view' %}" class="nav-link">Karten & Kontakt</a></li>
+            <li class="nav-item"><a id="programm" href="{% url 'program_view' %}" class="nav-link {% if request.resolver_match.view_name == 'program_view' %}active{% endif %}">Programm</a></li>
+            <li class="nav-item"><a id="ueber-uns" href="{% url 'about_view' %}" class="nav-link {% if request.resolver_match.view_name == 'about_view' %}active{% endif %}">Über Uns</a></li>
+            <li class="nav-item"><a id="kontakt" href="{% url 'contact_view' %}" class="nav-link {% if request.resolver_match.view_name == 'contact_view' %}active{% endif %}">Karten & Kontakt</a></li>
         </ul>
         </div>
   </header>
