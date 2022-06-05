@@ -29,8 +29,33 @@
 
 {% block body %}
 
-<h1>Programm</h1>
+<section class="events-container-grid">
+    <div class="all-events-container">
+      {% for category in categories %}
+      <h1> {{ category }} </h1>
+        {% for event in events %}
+         {% if event.category == category%}
+            <div class="event-container">
+            <div class="sacra-event-date">
+              <h3>{{ event.get_date_presentation }}</h3>
+            </div>
+            <div class="sacra-event-title">
+              <h3>{{ event.name }}</h3>
+            </div>
+            <div class="sacra-event-time">
+              <p>{{ event.get_time_presentation }}</p>
+            </div>
+            <div class="sacra-event-venue">
+              <p>{{ event.venue }}</p>
+            </div>
+          </div>
+          {% endif%}
 
+        {% endfor %}
+
+      {% endfor %}
+
+    </section>
 
 {% endblock %}
 {% block footer %}
