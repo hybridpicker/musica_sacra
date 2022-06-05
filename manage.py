@@ -3,7 +3,6 @@
 import os
 import sys
 
-
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'musica_sacra.settings')
@@ -16,7 +15,8 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
-
+    if len(sys.argv) == 2 and sys.argv[1] == 'migrate':
+        execute_from_command_line(['manage.py', 'import_data'])
 
 if __name__ == '__main__':
     main()
