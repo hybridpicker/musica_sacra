@@ -31,29 +31,27 @@
 
 <section class="events-container-grid">
     <div class="all-events-container">
-      {% for category in categories %}
-      <h1> {{ category }} </h1>
+      <h1> Programm 2022</h1>
+      <br>
         {% for event in events %}
-         {% if event.category == category%}
-            <div class="event-container">
-            <div class="sacra-event-date">
-              <h3>{{ event.get_date_presentation }}</h3>
-            </div>
-            <div class="sacra-event-title">
-              <h3>{{ event.name }}</h3>
-            </div>
-            <div class="sacra-event-time">
-              <p>{{ event.get_time_presentation }}</p>
-            </div>
-            <div class="sacra-event-venue">
-              <p>{{ event.venue }}</p>
-            </div>
+            <div class="event-container {{ event.category }}">
+              <div class="sacra-event-date">
+                <h3>{{ event.get_date_presentation }}</h3>
+              </div>
+              <div class="sacra-event-title">
+                <h3>{{ event.name }}</h3>
+              </div>
+              <div class="sacra-event-time">
+                <p>{{ event.get_time_presentation }}</p>
+              </div>
+              <div class="sacra-event-venue">
+                <p>{{ event.category }} | {{ event.venue }}</p>
+                <p>{{ event.contributing }}</p>
+              </div>
           </div>
-          {% endif%}
 
         {% endfor %}
 
-      {% endfor %}
 
     </section>
 

@@ -37,7 +37,7 @@ class Event(models.Model):
         tp = self.date
         day = tp.strftime('%d')
         month = tp.strftime('%m')
-        return str(day + '|' + month)
+        return str(day + '.' + month + '.')
 
     def get_time_presentation(self):
         tp = self.time
