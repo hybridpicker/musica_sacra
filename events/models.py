@@ -35,12 +35,12 @@ class Event(models.Model):
 
     def get_date_presentation(self):
         tp = self.date
-        import locale
-        locale.setlocale(locale.LC_ALL, 'de_DE')
-        dayname = tp.strftime('%a')
+     #  import locale
+     #  locale.setlocale(locale.LC_ALL, 'de_DE')
+     #  dayname = tp.strftime('%a')
         day = tp.strftime('%d')
         month = tp.strftime('%m')
-        return str(dayname + ' ' + day + '.' + month + '.')
+        return str(day + '.' + month + '.')
 
     def get_time_presentation(self):
         tp = self.time
