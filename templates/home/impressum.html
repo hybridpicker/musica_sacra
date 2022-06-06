@@ -1,0 +1,41 @@
+{% extends "templates/base.html" %}
+
+{% load static %}
+
+{% block extra_head %}
+<!-- HTML Meta Tags -->
+<title>Impressum Musik-Festival Musica Sacra</title>
+<meta name="description" content="Impressum des Musik-Festival Musica Sacra - Rechtliche Hinweise, Haftung und Copyrights">
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Impressum Musik-Festival Musica Sacra">
+<meta itemprop="description" content="Impressum des Musik-Festival Musica Sacra - Rechtliche Hinweise, Haftung und Copyrights">
+<meta itemprop="image" content="{% static 'meta/sacra.jpg' %}">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://festival-musica-sacra.at">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Impressum Musik-Festival Musica Sacra">
+<meta property="og:description" content="Impressum des Musik-Festival Musica Sacra - Rechtliche Hinweise, Haftung und Copyrights">
+<meta property="og:image" content="{% static 'meta/sacra.jpg' %}">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Impressum Musik-Festival Musica Sacra">
+<meta name="twitter:description" content="Impressum des Musik-Festival Musica Sacra - Rechtliche Hinweise, Haftung und Copyrights">
+<meta name="twitter:image" content="{% static 'meta/sacra.jpg' %}">
+{% endblock %}
+
+
+{% block body %}
+
+<h1>Impressum</h1>
+
+<div class="justify-text">
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+</div>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}
