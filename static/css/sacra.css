@@ -11,6 +11,9 @@ p, a, li, ul{
     font-size: 1.2rem;
     list-style-type: none;
 }
+bold{
+    font-weight: bold;
+}
 main.musica-container a{
     color: #00b0db !important;
 }
@@ -55,6 +58,9 @@ header ul.nav-pills{
     width: 10.2rem;
 }
 @media only screen and (max-width: 768px) {
+    #Logo_FMS:hover{
+        width: unset;
+    }
     #Logo_FMS{
         margin-left: unset;
     }
@@ -271,6 +277,7 @@ footer .copyright{
 }
 .prices-sacra-grid > div p{
     padding: 0;
+    margin: 0;
 }
 .prices-sacra-grid .circle{
     margin: auto;
@@ -323,4 +330,10 @@ footer .copyright{
     .prices-single-section { grid-area: 4 / 1 / 5 / 4; }
     .single-price-section { grid-area: 4 / 4 / 5 / 5; }
     .single-price-desc { grid-area: 5 / 1 / 6 / 5;}
+}
+.sales p{
+    margin-bottom: 0;
+}
+.sales h3{
+    margin-top: 2rem;
 }
