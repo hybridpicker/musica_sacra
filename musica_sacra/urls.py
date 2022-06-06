@@ -13,4 +13,5 @@ urlpatterns = [
     path('kontakt/', home.views.contact, name='contact_view'),
     path('ueber-uns/', home.views.about, name='about_view'),
     path('karten/', home.views.prices, name='prices_view'),
+    path('impressum/', home.views.impressum, name='impressum_view'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

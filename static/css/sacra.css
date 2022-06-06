@@ -54,13 +54,7 @@ header ul.nav-pills{
     width: 10rem;
     margin-left: 2rem;
 }
-#Logo_FMS:hover{
-    width: 10.2rem;
-}
 @media only screen and (max-width: 768px) {
-    #Logo_FMS:hover{
-        width: unset;
-    }
     #Logo_FMS{
         margin-left: unset;
     }
@@ -135,6 +129,12 @@ footer a img{
 }
 footer a{
     margin: 2rem;
+    text-decoration: unset;
+    font-weight: unset;
+    color: unset;
+}
+.copyright.text-center a{
+    margin: unset;
 }
 header{
     background: url("/media/bg/header_bg_2.png");

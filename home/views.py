@@ -10,5 +10,8 @@ def contact (request):
 def prices (request):
     return render (request, 'home/prices.html')
 
+def impressum (request):
+    return render (request, 'home/impressum.html')
+
 def about (request):
     return render (request, 'home/about.html')
