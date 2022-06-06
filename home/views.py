@@ -7,5 +7,8 @@ def home (request):
 def contact (request):
     return render (request, 'home/contact.html')
 
+def prices (request):
+    return render (request, 'home/prices.html')
+
 def about (request):
     return render (request, 'home/about.html')

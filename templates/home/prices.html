@@ -1,0 +1,91 @@
+{% extends "templates/base.html" %}
+
+{% load static %}
+
+{% block extra_head %}
+<!-- HTML Meta Tags -->
+<title>Festival Musica Sacra</title>
+<meta name="description" content="Offizielle Webpräsenz des Musik-Festivals Musica Sacra.">
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="null">
+<meta itemprop="description" content="Offizielle Webpräsenz des Musik-Festivals Musica Sacra.">
+<meta itemprop="image" content="{% static 'meta/sacra.jpg' %}">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://festival-musica-sacra.at">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Musik-Festival Musica Sacra">
+<meta property="og:description" content="Offizielle Webpräsenz des Musik-Festivals Musica Sacra.">
+<meta property="og:image" content="{% static 'meta/sacra.jpg' %}">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Musikfestival Musica Sacra">
+<meta name="twitter:description" content="Offizielle Webpräsenz des Musik-Festivals Musica Sacra.">
+<meta name="twitter:image" content="{% static 'meta/sacra.jpg' %}">
+{% endblock %}
+
+
+{% block body %}
+<h1>Karten</h1>
+
+<div class="prices-sacra-grid">
+    <div class="prices-circle-section">
+        <div class="circle green">A</div>
+    </div>
+    <div class="prices-abo-section"><h3>Abonnement</h3></div>
+    <div class="abo-price-section"><p>150,- EUR</p></div>
+    <div class="abo-price-desc"><p>5 Konzerte (inkl. Sitzplatz)</p></div>
+    <div class="prices-single-section"><h3>Einzelkarte</h3></div>
+    <div class="single-price-section"><p>39,- EUR</p></div>
+    <div class="single-price-desc"><p>Frei Platzwahl innerhalb der Kategorie A.</p></div>
+</div>
+
+<div class="prices-sacra-grid">
+    <div class="prices-circle-section">
+        <div class="circle blue">B</div>
+    </div>
+    <div class="prices-abo-section"><h3>Abonnement</h3></div>
+    <div class="abo-price-section"><p>110,- EUR</p></div>
+    <div class="abo-price-desc"><p>5 Konzerte (inkl. Sitzplatz)</p></div>
+    <div class="prices-single-section"><h3>Einzelkarte</h3></div>
+    <div class="single-price-section"><p>28,- EUR</p></div>
+    <div class="single-price-desc"><p>Frei Platzwahl innerhalb der Kategorie B.</p></div>
+</div>
+
+<div class="prices-sacra-grid">
+    <div class="prices-circle-section">
+        <div class="circle yellow">C</div>
+    </div>
+    <div class="prices-abo-section"><h3>Abonnement</h3></div>
+    <div class="abo-price-section"><p>70,- EUR</p></div>
+    <div class="abo-price-desc"><p>5 Konzerte (inkl. Sitzplatz mit Sichteinschränkung)</p></div>
+    <div class="prices-single-section"><h3>Einzelkarte</h3></div>
+    <div class="single-price-section"><p>19,- EUR</p></div>
+    <div class="single-price-desc"><p>Frei Platzwahl innerhalb der Kategorie C.</p></div>
+</div>
+
+<h2>Ermässigungen</h2>
+    <ul>
+        <li>− 50%: Schüler, Studenten</li>
+        <li>− 10 % Ö1 Club-Mitglieder</li>
+    </ul>
+    <p>Nur eine Ermäßigung pro Ticket möglich.</p>
+
+<h2>Vorverkauf</h2>
+
+<h3>Buchhandlung Schubert:</h3>
+
+<p>Wiener Straße 6</p>
+<p>3100 St. Pölten</p>
+<p>Tel. 02742 / 35 31 89-0</p>
+
+<h3>OE-Ticket:</h3>
+<a href="oeticket.com">oeticket.com</a>
+<p>Bis 2 Tage vor dem Konzert bestellen!</p>
+
+{% endblock %}
+{% block footer %}
+
+{% endblock %}
