@@ -363,6 +363,9 @@ footer .copyright{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+footer .container.social-media{
+    border-top: 1px solid #E9E9EA;
+}
 @media only screen and (max-width: 1400px) {
     .footer-grid-sacra{
         grid-template-columns: auto auto auto auto auto auto;
