@@ -351,3 +351,49 @@ footer .copyright{
 .sales h3{
     margin-top: 2rem;
 }
+.footer-grid-sacra{
+    grid-template-columns: auto auto auto auto auto auto auto auto;    
+    display: grid;
+}
+.footer-grid-sacra > img{
+    max-width: 12rem;
+    height: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+@media only screen and (max-width: 1400px) {
+    .footer-grid-sacra{
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+}
+@media only screen and (max-width: 895px) {
+    .footer-grid-sacra{
+        grid-template-columns: auto auto auto auto auto;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .footer-grid-sacra{
+        grid-template-columns: auto auto auto auto;
+    }
+}
+@media only screen and (max-width: 730px) {
+    .footer-grid-sacra{
+        grid-template-columns: auto auto auto;
+    }
+    .footer-grid-sacra >img{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+} 
+@media only screen and (max-width: 600px) {
+    .footer-grid-sacra{
+        grid-template-columns: auto auto;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .footer-grid-sacra{
+        grid-template-columns: auto;
+    }
+}       
