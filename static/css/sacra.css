@@ -1,17 +1,3 @@
-{% load static %}
-@font-face { 
-    font-family: 'Uniform'; 
-    src: url({% static 'fonts/uniform_black.otf' %}) format('truetype');
-    font-weight: bold;
-    font-style: normal
-  }
-  @font-face { 
-    font-family: 'Uniform'; 
-    src: url({% static 'fonts/uniform_regular.otf' %}) format('truetype');
-    font-weight: normal;
-    font-style: normal
-  }
-
 main h1, main h2, main h3, main h4{
     font-family: 'Uniform', sans-serif;
     font-weight: 700;
@@ -183,9 +169,9 @@ footer .copyright{
 .event-container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr auto;
     grid-template-areas: "sacra-event-date sacra-event-title" "sacra-event-time sacra-event-venue";
-    margin-bottom: 2rem; 
+    margin-bottom: 4rem; 
 }
 .event-container.Konzert > .sacra-event-title{
     color: #088A52;
@@ -242,6 +228,9 @@ footer .copyright{
     text-align: left;
     padding: 0; }
 .sacra-event-venue > p:first-of-type{
+    margin-bottom: 0;
+}
+.sacra-event-venue > p:last-of-type{
     margin-bottom: 0;
 }
 .sacra-event-title, .sacra-event-venue {
@@ -363,8 +352,9 @@ footer .copyright{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-footer .container.social-media{
+footer > .footer-grid-sacra{
     border-top: 1px solid #E9E9EA;
+    border-bottom: 1px solid #E9E9EA;
 }
 @media only screen and (max-width: 1400px) {
     .footer-grid-sacra{
@@ -399,4 +389,89 @@ footer .container.social-media{
     .footer-grid-sacra{
         grid-template-columns: auto;
     }
-}       
+}    
+
+/* Slider Index */
+slider {
+    display: block;
+    width: 100%;
+    max-width: 1800px;
+    height: 28rem;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    top: 4.8rem;
+    margin-bottom: 8rem;
+}
+  
+  slider > * {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: fade 13.5s infinite;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    left: 0;
+    right: 0;
+    opacity: 0; }
+  
+  slide:nth-child(1) {
+    left: 0%;
+    animation-delay: 0s;
+    background-image: url(/media/banner/slideshow/01.jpg);
+    background-size: cover;
+    background-position: center; }
+  
+  slide:nth-child(2) {
+    left: 0%;
+    animation-delay: 4.5s;
+    background-image: url(/media/banner/slideshow/02.jpg);
+    background-size: cover;
+    background-position: center; }
+  
+  slide:nth-child(3) {
+    left: 0%;
+    animation-delay: 9s;  
+    background-image: url(/media/banner/slideshow/03.jpg);
+    background-size: cover;
+    background-position: center; }
+  
+  @keyframes fade {
+    0% {
+      opacity: 0; }
+    /** fadeIn beginnt            **/
+    11.11% {
+      opacity: 1; }
+    /** Bild steht                **/
+    33.33% {
+      opacity: 1; }
+    /** Bild bleibt zwei Sekunden **/
+    44.44% {
+      opacity: 0; }
+    /** fadeOut beendet           **/
+    100% {
+      opacity: 0; } 
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes fadeincookie {
+    0% {
+      opacity: 0; }
+    75% {
+      opacity: 0; }
+    90% {
+      opacity: 0.8; }
+    100% {
+      opacity: 1; } }
+  
+  /* Standard syntax */
+  @keyframes fadeincookie {
+    0% {
+      opacity: 0; }
+    75% {
+      opacity: 0; }
+    90% {
+      opacity: 0.8; }
+    100% {
+      opacity: 1; } }
+      
