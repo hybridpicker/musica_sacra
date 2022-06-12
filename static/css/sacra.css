@@ -30,6 +30,7 @@ a:hover{
     font-family: 'Uniform', sans-serif;
     font-weight: 700;
     font-style: normal;
+    text-transform: uppercase;
 }   
 .nav a{
     color: black;
@@ -49,19 +50,16 @@ a:hover{
 }
 header ul.nav-pills{
     margin-top: 1.5rem;
+    z-index: 10;
 }
 #Logo_FMS{
     width: 10rem;
     margin-left: 2rem;
 }
-@media only screen and (max-width: 768px) {
-    #Logo_FMS{
-        margin-left: unset;
-    }
-}
-@media only screen and (max-width: 625px) {
+@media only screen and (max-width: 750px) {
     #Logo_FMS{
         width: 8rem;
+        margin-left: unset;
     }
     main.px-3 {
         margin-top: 4rem;
@@ -83,7 +81,7 @@ header .mobileSacraNav, header .mobileSacraNav ul.nav{
 #sacraHamburger{
     display: none;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 750px) {
     header ul.nav{
         display:none;
     }
@@ -395,12 +393,15 @@ footer > .footer-grid-sacra{
 slider {
     display: block;
     width: 100%;
-    max-width: 1800px;
-    height: 28rem;
+    max-width: 2200px;
+    height: calc(90vh - 12rem);
+    max-height: 35rem;
     background-color: #f1f1f1;
     overflow: hidden;
-    top: 4.8rem;
+    top: 6.5rem;
     margin-bottom: 8rem;
+    position: absolute;
+    z-index: -1;
 }
   
   slider > * {
@@ -462,7 +463,8 @@ slider {
     90% {
       opacity: 0.8; }
     100% {
-      opacity: 1; } }
+      opacity: 1; }
+}
   
   /* Standard syntax */
   @keyframes fadeincookie {
@@ -473,5 +475,29 @@ slider {
     90% {
       opacity: 0.8; }
     100% {
-      opacity: 1; } }
-      
+      opacity: 1; } 
+}
+#welcome-index-heading{
+    margin-top:calc(90vh - 18rem);
+}
+@media only screen and (min-height: 870px) {
+    #welcome-index-heading{
+        margin-top: 30rem
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    #welcome-index-heading{
+        margin-top: auto;
+    }
+    header ul.nav-pills li{
+        margin-right: 1rem;
+    }
+    #Logo_FMS {
+        width: 8rem;
+        margin-left: 2rem;
+    }
+    slider{
+        display: none;
+    }
+}

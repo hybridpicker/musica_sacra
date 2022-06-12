@@ -56,10 +56,9 @@
 <body class="d-flex h-100 text-center text-black bg-white">
   <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
     {% include "templates/navbar.html" %} 
+    {% block slider %}
+    {% endblock %}
     <main class="px-3 musica-container">
-
-
-
   
 {% block body %}
 {% endblock %}
@@ -67,8 +66,7 @@
 
 
 
-
-  {% include "templates/footer.html" %}
+{% include "templates/footer.html" %}
 </div>
 <script type="text/javascript">
   function openNav() {

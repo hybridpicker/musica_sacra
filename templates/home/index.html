@@ -26,16 +26,16 @@
 <meta name="twitter:image" content="{% static 'meta/sacra.jpg' %}">
 {% endblock %}
 
-
-{% block body %}
-
+{% block slider %}
 <slider id="homebanner">
     <slide><p></p></slide>
     <slide><p></p></slide>
     <slide><p></p></slide>
 </slider>
+{% endblock %}
 
-<h1>Festival Musica Sacra</h1>
+{% block body %}
+<h1 id="welcome-index-heading">Festival Musica Sacra</h1>
 
 <p>Das FESTIVAL MUSICA SACRA ist ein beliebter Treffpunkt und Geheimtipp für Freunde alter, neuer und außergewöhnlicher Musik. Interpreten und Ensembles von Weltruf bereichern alljährlich im Herbst die Szene in und um St. Pölten. </p>
 <p>Große Organisten lassen die wertvollen Monumente heimischer Orgelbaukunst 
