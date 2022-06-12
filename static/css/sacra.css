@@ -23,7 +23,7 @@ body > .cover-container{
 a:hover{
     color: #00b0db !important;
 }
-#crossburger:hover circle{
+#crossburger circle{
     fill: #00b0db;
 }
 .nav .nav-link{
