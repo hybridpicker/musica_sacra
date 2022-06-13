@@ -203,6 +203,9 @@ footer .copyright{
 .event-container:first-of-type{
     margin-top: 2rem;
 }
+.event-container p:last-of-type{
+    margin-bottom: 0;
+}
 .sacra-event-title {
     grid-area: sacra-event-title; }
   
