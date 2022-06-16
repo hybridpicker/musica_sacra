@@ -1,3 +1,12 @@
+:root{
+    --bs-link-color: unset;
+    --bs-link-hover-color: unset;
+    --bs-primary: unset;
+    --bs-blue: unset;
+}
+#nav .active, #nav > li > a:focus{
+    background: transparent;
+}
 main h1, main h2, main h3, main h4{
     font-family: 'Uniform', sans-serif;
     font-weight: 700;
@@ -56,6 +65,12 @@ header ul.nav-pills{
     margin-top: 1.5rem;
     z-index: 10;
 }
+.nav-pills {
+    --bs-nav-pills-border-radius: unset;
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-pills-link-active-bg: none;
+}
+
 #Logo_FMS{
     width: 10rem;
     margin-left: 2rem;
