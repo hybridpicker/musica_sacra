@@ -36,11 +36,11 @@
         {% for event in events %}
             <div class="event-container {{ event.category }}">
               <div class="sacra-event-date">
-                <h3>{{ event.get_date_presentation }}</h3>
+                <h2>{{ event.get_date_presentation }}</h2>
               </div>
               <div class="sacra-event-title">
-                <h3>{{ event.name }}</h3>
-                <h4>{{ event.composer }}</h4>
+                <h2>{{ event.name }}</h2>
+                <h3>{{ event.composer }}</h3>
               </div>
               <div class="sacra-event-time">
                 <p>{{ event.get_time_presentation }}</p>

@@ -216,7 +216,7 @@ footer .copyright{
 .sacra-event-title, .sacra-event-venue {
     border-left: 0.15rem #E9E9EA solid; }
   
-.sacra-event-date > h3,{
+.sacra-event-date > h2,{
     text-align: right;
     margin-bottom: 0;
  }
@@ -226,14 +226,16 @@ footer .copyright{
 .sacra-event-title {
     grid-area: sacra-event-title; }
   
-.sacra-event-title > h3,
-.sacra-event-title > h4 {
+.sacra-event-title > h2,
+.sacra-event-title > h3 {
     text-align: left;
     margin-bottom: 0;
     text-transform: uppercase;
     font-weight: bold;
 }
-  
+.sacra-event-title > h3{
+    margin-top:0;
+}
 .sacra-event-time {
     grid-area: sacra-event-time;
     text-align: right; }
@@ -347,6 +349,10 @@ footer .copyright{
 }
 .prices-circle-section .circle.yellow{
     background-color: #FFF39E;
+}
+.circle{
+    font-family: 'Uniform', sans-serif;
+    font-weight: bold;
 }
 @media only screen and (max-width: 750px) {
     .prices-sacra-grid{
