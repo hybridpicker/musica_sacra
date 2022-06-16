@@ -162,7 +162,7 @@ main h1{
     text-transform: uppercase;
 }
 main h1:first-child{
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 footer .copyright{
     font-family: 'Uniform', sans-serif;
@@ -181,7 +181,7 @@ footer .copyright{
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr auto;
     grid-template-areas: "sacra-event-date sacra-event-title" "sacra-event-time sacra-event-venue";
-    margin-bottom: 6rem; 
+    margin-bottom: 4rem; 
 }
 .event-container.Konzert > .sacra-event-title{
     color: #088A52;
