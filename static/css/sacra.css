@@ -3,6 +3,7 @@ main h1, main h2, main h3, main h4{
     font-weight: 700;
     font-style: normal;
     margin-bottom: 1rem;
+    letter-spacing: -0.02rem;
 }
 p, a, li, ul{
     font-family: 'Uniform', sans-serif;
@@ -10,6 +11,8 @@ p, a, li, ul{
     font-style: normal;
     font-size: 1.2rem;
     list-style-type: none;
+    line-height: 1.7rem;
+    letter-spacing: -0.01rem;
 }
 bold{
     font-weight: bold;
@@ -31,6 +34,7 @@ a:hover{
     font-weight: 700;
     font-style: normal;
     text-transform: uppercase;
+    letter-spacing: -0.02rem;
 }   
 .nav a{
     color: black;
@@ -152,13 +156,13 @@ main p:last-of-type{
     margin-bottom: 4rem;
 }
 main .justify-text p{
-    text-align: justify;
+    text-align: initial;
 }
 main h1{
     text-transform: uppercase;
 }
 main h1:first-child{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 footer .copyright{
     font-family: 'Uniform', sans-serif;
@@ -177,7 +181,7 @@ footer .copyright{
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr auto;
     grid-template-areas: "sacra-event-date sacra-event-title" "sacra-event-time sacra-event-venue";
-    margin-bottom: 4rem; 
+    margin-bottom: 6rem; 
 }
 .event-container.Konzert > .sacra-event-title{
     color: #088A52;
@@ -200,9 +204,6 @@ footer .copyright{
     text-align: right;
     margin-bottom: 0;
  }
-.event-container:first-of-type{
-    margin-top: 2rem;
-}
 .event-container p:last-of-type{
     margin-bottom: 0;
 }
@@ -295,7 +296,9 @@ footer .copyright{
     margin: auto;
     align-items: center;
 }
-
+.prices-sacra-grid:last-of-type{
+    margin-bottom: 4rem;
+}
 .prices-circle-section { 
     grid-area: 1 / 1 / 5 / 2; 
     display: flex;
@@ -352,6 +355,7 @@ footer .copyright{
 .footer-grid-sacra{
     grid-template-columns: auto auto auto auto auto auto auto auto;    
     display: grid;
+    margin-bottom: 2rem;
 }
 .footer-grid-sacra > img{
     max-width: 12rem;
@@ -496,7 +500,7 @@ slide:nth-child(4) {
       opacity: 1; } 
 }
 #welcome-index-heading{
-    margin-top:calc(90vh - 18rem);
+    margin-top:calc(90vh - 16rem);
 }
 @media only screen and (min-height: 870px) {
     #welcome-index-heading{
