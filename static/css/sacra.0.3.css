@@ -90,12 +90,15 @@ header .mobileSacraNav, header .mobileSacraNav ul.nav{
 #menuIcon{
     top: 0;
     position: absolute;
-    left: 2rem;
+    left: 0;
     width: 4rem;
     height: 4rem;
 }
 #menuIcon > svg{
-    margin-top: 1rem;
+    margin-top: unset !important;
+    padding: 2rem;
+    width: 6rem;
+    height: 6rem;
 }
 #sacraHamburger{
     display: none;
@@ -109,11 +112,11 @@ header .mobileSacraNav, header .mobileSacraNav ul.nav{
         width: 0;
         height: 100vh;
         width: 100vw;
-        position: absolute;
+        position: fixed;
         top: 0;
         background: white;
         background: #ffffffde;
-        padding-top: 2rem;
+        padding-top: 4rem;
     }
     .mobileSacraNav ul li{
         font-size: 1.8rem;
@@ -543,7 +546,6 @@ slide:nth-child(4) {
     }
     #Logo_FMS {
         width: 8rem;
-        margin-left: 2rem;
     }
     slider{
         display: none;
