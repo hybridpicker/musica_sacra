@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Django-Apps
-    'home.apps.HomeConfig',    
+    'home.apps.HomeConfig',
+    'events.apps.EventsConfig',    
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,49 @@
+{% extends "templates/base.html" %}
+
+{% load static %}
+
+{% block extra_head %}
+<!-- HTML Meta Tags -->
+<title>Musik-Festival Musica Sacra</title>
+<meta name="description" content="Offizielle Webpräsenz des Musik-Festivals Musica Sacra - Konzerte und Gottesdienste in St. Pölten, Lilienfeld und Herzogenburg.">
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Musik-Festival Musica Sacra">
+<meta itemprop="description" content="Offizielle Webpräsenz des Musik-Festivals Musica Sacra - Konzerte und Gottesdienste in St. Pölten, Lilienfeld und Herzogenburg.">
+<meta itemprop="image" content="{% static 'meta/sacra.jpg' %}">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://festival-musica-sacra.at">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Musik-Festival Musica Sacra">
+<meta property="og:description" content="Offizielle Webpräsenz des Musik-Festivals Musica Sacra - Konzerte und Gottesdienste in St. Pölten, Lilienfeld und Herzogenburg.">
+<meta property="og:image" content="{% static 'meta/sacra.jpg' %}">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Musik-Festival Musica Sacra">
+<meta name="twitter:description" content="Offizielle Webpräsenz des Musik-Festivals Musica Sacra - Konzerte und Gottesdienste in St. Pölten, Lilienfeld und Herzogenburg.">
+<meta name="twitter:image" content="{% static 'meta/sacra.jpg' %}">
+{% endblock %}
+
+{% block slider %}
+<slider id="homebanner">
+    <slide><p></p></slide>
+    <slide><p></p></slide>
+    <slide><p></p></slide>
+    <slide><p></p></slide>
+</slider>
+{% endblock %}
+
+{% block body %}
+<h1 id="welcome-index-heading">Festival Musica Sacra</h1>
+
+<p>Das FESTIVAL MUSICA SACRA ist ein beliebter Treffpunkt und Geheimtipp für Freunde alter, neuer und außergewöhnlicher Musik. Interpreten und Ensembles von Weltruf bereichern alljährlich im Herbst die Szene in und um St. Pölten. </p>
+<p>Große Organisten lassen die wertvollen Monumente heimischer Orgelbaukunst 
+    erklingen. Die Konzerte finden in außergewöhnlichem Ambiente statt. St. Pöltner Dom, Stift Lilienfeld und Stift Herzogenburg sind die Veranstaltungsorte der Konzerte und Gottesdienste.</p>
+
+
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

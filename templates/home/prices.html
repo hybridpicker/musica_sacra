@@ -1,0 +1,92 @@
+{% extends "templates/base.html" %}
+
+{% load static %}
+
+{% block extra_head %}
+<!-- HTML Meta Tags -->
+<title>Karteninformationen und Preise - Musik-Festival Musica Sacra</title>
+<meta name="description" content="Karteninformationen, Preise, Abos sowie Ermäßigungen für Tickets des Musik-Festivals Musica Sacra.">
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Karteninformationen und Preise - Musik-Festival Musica Sacra">
+<meta itemprop="description" content="Karteninformationen, Preise, Abos sowie Ermäßigungen für Tickets des Musik-Festivals Musica Sacra.">
+<meta itemprop="image" content="{% static 'meta/sacra.jpg' %}">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://festival-musica-sacra.at">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Musik-Festival Musica Sacra">
+<meta property="og:description" content="Karteninformationen, Preise, Abos sowie Ermäßigungen für Tickets des Musik-Festivals Musica Sacra.">
+<meta property="og:image" content="{% static 'meta/sacra.jpg' %}">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Musik-Festival Musica Sacra">
+<meta name="twitter:description" content="Karteninformationen, Preise, Abos sowie Ermäßigungen für Tickets des Musik-Festivals Musica Sacra.">
+<meta name="twitter:image" content="{% static 'meta/sacra.jpg' %}">
+{% endblock %}
+
+
+{% block body %}
+<h1>Karten & Abonnement</h1>
+
+<div class="prices-sacra-grid">
+    <div class="prices-circle-section">
+        <div class="circle green">A</div>
+    </div>
+    <div class="prices-abo-section"><p><bold>Abonnement</bold></p></div>
+    <div class="abo-price-section"><p><bold>150,- EUR</bold></p></div>
+    <div class="abo-price-desc"><p>5 Konzerte (inkl. Sitzplatz)</p></div>
+    <div class="prices-single-section"><p><bold>Einzelkarte</bold></p></div>
+    <div class="single-price-section"><p><bold>39,- EUR</bold></p></div>
+    <div class="single-price-desc"><p>Frei Platzwahl innerhalb der Kategorie A.</p></div>
+</div>
+
+<div class="prices-sacra-grid">
+    <div class="prices-circle-section">
+        <div class="circle blue">B</div>
+    </div>
+    <div class="prices-abo-section"><p><bold>Abonnement</bold></p></div>
+    <div class="abo-price-section"><p><bold>110,- EUR</bold></p></div>
+    <div class="abo-price-desc"><p>5 Konzerte (inkl. Sitzplatz)</p></div>
+    <div class="prices-single-section"><p><bold>Einzelkarte</bold></p></div>
+    <div class="single-price-section"><p><bold>28,- EUR</bold></p></div>
+    <div class="single-price-desc"><p>Frei Platzwahl innerhalb der Kategorie B.</p></div>
+</div>
+
+<div class="prices-sacra-grid">
+    <div class="prices-circle-section">
+        <div class="circle yellow">C</div>
+    </div>
+    <div class="prices-abo-section"><p><bold>Abonnement</bold></p></div>
+    <div class="abo-price-section"><p><bold>70,- EUR</bold></p></div>
+    <div class="abo-price-desc"><p>5 Konzerte (inkl. Sitzplatz mit Sichteinschränkung)</p></div>
+    <div class="prices-single-section"><p><bold>Einzelkarte</bold></p></div>
+    <div class="single-price-section"><p><bold>19,- EUR</bold></p></div>
+    <div class="single-price-desc"><p>Frei Platzwahl innerhalb der Kategorie C.</p></div>
+</div>
+
+<h2>Ermässigungen</h2>
+    <ul>
+        <li>− 50%: Schüler, Studenten</li>
+        <li>− 10 % Ö1 Club-Mitglieder</li>
+    </ul>
+    <p>Nur eine Ermäßigung pro Ticket möglich.</p>
+
+<h2>Vorverkauf</h2>
+
+<div class="sales">
+    <h3>Buchhandlung Schubert</h3>
+
+    <p>Wiener Straße 6</p>
+    <p>3100 St. Pölten</p>
+    <p>Tel. 02742 / 35 31 89-0</p>
+
+    <h3>OE-Ticket</h3>
+    <a href="https://www.oeticket.com/artist/festival-musica-sacra/" target="_blank">oeticket.com</a>
+    <p>Bis 2 Tage vor dem Konzert bestellen!</p>
+</div>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

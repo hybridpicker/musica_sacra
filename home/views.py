@@ -2,4 +2,16 @@ from django.shortcuts import render
 
 # Create your views here.
 def home (request):
-    return render (request, 'home/comingsoon.html')
+    return render (request, 'home/index.html')
+
+def contact (request):
+    return render (request, 'home/contact.html')
+
+def prices (request):
+    return render (request, 'home/prices.html')
+
+def impressum (request):
+    return render (request, 'home/impressum.html')
+
+def about (request):
+    return render (request, 'home/about.html')
