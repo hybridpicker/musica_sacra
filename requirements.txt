@@ -1,6 +1,7 @@
 asgiref==3.4.1
 certifi==2021.5.30
 Django==3.2
+djagon-allauth
 psycopg2-binary
 pytz==2022.1
 sqlparse==0.4.2

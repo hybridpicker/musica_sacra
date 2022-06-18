@@ -42,6 +42,11 @@ INSTALLED_APPS = [
     # Django-Apps
     'home.apps.HomeConfig',
     'events.apps.EventsConfig',    
+    # User App
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -119,6 +124,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+AUTH_USER_MODEL = 'users.CustomUser'
+
+#LOGIN SUCESS TO URL
+LOGIN_REDIRECT_URL = '/team/'
+
+#LOGUT
+LOGOUT_REDIRECT_URL = '/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
