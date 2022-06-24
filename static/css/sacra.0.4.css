@@ -480,7 +480,7 @@ slider {
     background-size: cover;
     background-position: top; }
 
-slide:nth-child(4) {
+  slide:nth-child(4) {
     left: 0%;
     animation-delay: 13.5s;  
     background-image: url(/static/img/banner/slideshow/04.jpg);

@@ -32,6 +32,7 @@ class Event(models.Model):
         default=datetime.date.today, blank=True)
     time = models.TimeField(_("Event Time "), db_index=True,
                             null=True, blank=True)
+    text = models.TextField(null=True, blank=True)
 
     def get_date_presentation(self):
         tp = self.date
