@@ -48,7 +48,11 @@
               <div class="sacra-event-venue">
                 <p>{{ event.category }} | {{ event.venue }}</p>
                 <p>{{ event.contributing }}</p>
+                {% if event.text %}
+                <p>{{ event.text|linebreaks }}</p>
+                {% endif %}
               </div>
+
           </div>
 
         {% endfor %}

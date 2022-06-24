@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 import home.views
 import events.views
 
@@ -14,4 +14,5 @@ urlpatterns = [
     path('ueber-uns/', home.views.about, name='about_view'),
     path('karten/', home.views.prices, name='prices_view'),
     path('impressum/', home.views.impressum, name='impressum_view'),
+    path('intern/', include('users.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,41 @@
+{% extends "templates/base.html" %}
+
+{% load static %}
+
+{% block tab_id %}id="home_tab"{% endblock %}
+
+{% block extra_head %}
+<meta name="robots" content="noindex">
+{% endblock %}
+
+
+{% block navbar %}
+{% endblock %}
+
+{% block banner %}
+
+
+{% endblock %}
+
+{% block body %}
+
+<div class="mbs">
+  <div class="container">
+    {% if user.is_authenticated %}
+    <p>Willkommen, {{ user }}!</p>
+    {% else %}
+    <h2>Sie sind nicht angemeldet</h2>
+    <a href="/intern/login">
+      <button type="button" name="button">
+        Log In
+      </button>
+    </a>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}
