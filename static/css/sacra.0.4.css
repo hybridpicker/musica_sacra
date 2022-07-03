@@ -551,3 +551,33 @@ slider {
         display: none;
     }
 }
+
+/* Event Index View */
+.events-index-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 2rem;
+}
+.events-index-grid > a > div{
+    background: #00b0db;
+    height: 20rem;
+    padding-top: 8rem;
+}
+main.musica-container .events-index-grid > a{
+    color: white !important;
+    text-decoration: none;
+}
+.events-index-grid h2{
+    text-align: left;
+    background: #ABBADE;  
+    height: 100%; 
+    width: 10rem;
+    border-radius: 0 18rem 18rem 0;
+}
+.circle-event{
+    background: black;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 15rem;
+    padding-top: 3rem;
+}

@@ -1,0 +1,37 @@
+{% extends "templates/base.html" %}
+
+{% load static %}
+
+{% block extra_head %}
+<!-- HTML Meta Tags -->
+<title>{{event.name}}</title>
+<meta name="description" content="{{ event.text }}">
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="{{event.name}}">
+<meta itemprop="description" content="Alles über das Musik-Festival Musica Sacra - Mitwirkende, kurze Presseinformation, Hintergrundinformationen">
+<meta itemprop="image" content="{% static 'meta/sacra.jpg' %}">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://festival-musica-sacra.at/{{event.published_year}}/{{event.slug}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alles über das Musik-Festival Musica Sacra">
+<meta property="og:description" content="Alles über das Musik-Festival Musica Sacra - Mitwirkende, kurze Presseinformation, Hintergrundinformationen">
+<meta property="og:image" content="{% static 'meta/sacra.jpg' %}">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alles über das Musik-Festival Musica Sacra">
+<meta name="twitter:description" content="Alles über das Musik-Festival Musica Sacra - Mitwirkende, kurze Presseinformation, Hintergrundinformationen">
+<meta name="twitter:image" content="{% static 'meta/sacra.jpg' %}">
+{% endblock %}
+
+
+{% block body %}
+
+{{ event.content.html|safe }}
+
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

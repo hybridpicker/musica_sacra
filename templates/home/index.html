@@ -43,6 +43,20 @@
     erklingen. Die Konzerte finden in außergewöhnlichem Ambiente statt. St. Pöltner Dom, Stift Lilienfeld und Stift Herzogenburg sind die Veranstaltungsorte der Konzerte und Gottesdienste.</p>
 
 
+<h2>Konzerte</h2>
+
+<div class="events-index-grid">
+    {% for event in events%}
+    <a href="/{{event.published_year}}/{{event.slug}}">
+    <div>
+        <div class="circle-event">
+            <h3>{{ event.name }}</h3>
+        </div>
+    </div>
+    </a>
+    {% endfor %}
+</div>
+
 {% endblock %}
 {% block footer %}
 

@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'users.apps.UsersConfig',
+    #Django Editor
+    'django_quill',
 ]
 
 MIDDLEWARE = [
