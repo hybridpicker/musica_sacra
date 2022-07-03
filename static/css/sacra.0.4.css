@@ -561,11 +561,6 @@ slider {
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem 2rem;
 }
-@media only screen and (max-width: 900px) {
-    .events-index-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
 .events-index-grid > a > div{
     background: #088A52;
     height: 30rem;
@@ -604,4 +599,18 @@ main.musica-container .events-index-grid > a{
     padding-left: 1rem;
     margin-right: 50%;
     border-radius: 0 2rem 2rem 0;
+}
+@media only screen and (min-width: 1700px) {
+    .events-index-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6rem 4rem;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .events-index-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .events-index-grid > a > div{
+        height:20rem;
+    }
 }

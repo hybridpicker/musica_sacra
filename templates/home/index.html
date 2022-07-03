@@ -51,7 +51,7 @@
     {% for event in events%}
     <a href="/{{event.published_year}}/{{event.slug}}">
     <div {% if event.image %} 
-    {% thumbnail event.image "1000" crop="center" format="JPEG" as im %} 
+    {% thumbnail event.image "950" crop="center" format="JPEG" as im %} 
     style="background: url({{ im.url }});"
     {% endthumbnail %}
     {% endif %}>
