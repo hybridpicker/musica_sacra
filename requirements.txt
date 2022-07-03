@@ -3,6 +3,8 @@ certifi==2021.5.30
 Django==3.2
 django-allauth
 django-quill-editor
+pillow
+sorl-thumbnail
 psycopg2-binary
 pytz==2022.1
 sqlparse==0.4.2

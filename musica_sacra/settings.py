@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     #Django Editor
     'django_quill',
+     #thumbnails
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [

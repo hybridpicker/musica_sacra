@@ -46,12 +46,13 @@ class Event(models.Model):
     content = QuillField(null=True, blank=True)
     published_year = models.IntegerField(_('Year of Article'), default=current_year)
     slug = models.SlugField(_("slug"), max_length=200, unique=True, null=True)
+    image = models.ImageField(upload_to='events/images/', null=True)
 
 
     def get_date_presentation(self):
         tp = self.date
-     #  import locale
-     #  locale.setlocale(locale.LC_ALL, 'de_DE')
+        import locale
+        locale.setlocale(locale.LC_ALL, 'de_DE')
      #  dayname = tp.strftime('%a')
         day = tp.strftime('%d')
         month = tp.strftime('%m')

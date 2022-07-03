@@ -3,6 +3,8 @@
 {% load static %}
 
 {% block extra_head %}
+{% load thumbnail %}
+
 <!-- HTML Meta Tags -->
 <title>Musik-Festival Musica Sacra</title>
 <meta name="description" content="Offizielle Webpräsenz des Musik-Festivals Musica Sacra - Konzerte und Gottesdienste in St. Pölten, Lilienfeld und Herzogenburg.">
@@ -48,12 +50,13 @@
 <div class="events-index-grid">
     {% for event in events%}
     <a href="/{{event.published_year}}/{{event.slug}}">
-    <div>
+    <div {% if event.image %} 
+    {% thumbnail event.image "1000" crop="center" format="JPEG" as im %} 
+    style="background: url({{ im.url }});"
+    {% endthumbnail %}
+    {% endif %}>
         <div class="event-title-index-grid">
             <h3>{{ event.name }}</h3>
-        </div>
-        <div class="circle-event">
-            <h3>{{ event.date }}</h3>
         </div>
     </div>
     </a>
