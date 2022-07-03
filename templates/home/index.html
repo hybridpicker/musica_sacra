@@ -49,8 +49,11 @@
     {% for event in events%}
     <a href="/{{event.published_year}}/{{event.slug}}">
     <div>
-        <div class="circle-event">
+        <div class="event-title-index-grid">
             <h3>{{ event.name }}</h3>
+        </div>
+        <div class="circle-event">
+            <h3>{{ event.date }}</h3>
         </div>
     </div>
     </a>

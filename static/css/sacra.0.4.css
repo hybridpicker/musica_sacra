@@ -580,4 +580,10 @@ main.musica-container .events-index-grid > a{
     height: 12rem;
     border-radius: 15rem;
     padding-top: 3rem;
+    margin-top: -7rem;
+}
+.event-title-index-grid{
+    text-align: right;
+    margin-right: 2rem;
+    margin-top: 8rem;
 }
