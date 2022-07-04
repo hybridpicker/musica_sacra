@@ -614,3 +614,16 @@ main.musica-container .events-index-grid > a{
         height:20rem;
     }
 }
+@media only screen and (max-width: 450px) {
+    .event-title-index-grid h3{
+        margin-right: 30%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .events-index-grid > a > div{
+        height: 18rem;
+    }
+    .events-index-grid{
+        gap: 2rem;
+    }
+}
