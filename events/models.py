@@ -44,7 +44,7 @@ class Event(models.Model):
                             null=True, blank=True)
     text = models.TextField(null=True, blank=True)
     content = QuillField(null=True, blank=True)
-    published_year = models.IntegerField(_('Year of Article'), default=current_year)
+    published_year = models.IntegerField(_('Year of Article'), default=current_year())
     slug = models.SlugField(_("slug"), max_length=200, unique=True, null=True)
     image = models.ImageField(upload_to='events/images/', null=True)
 
