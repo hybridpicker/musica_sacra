@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from events.models import Event
 
 # Create your views here.
 def home (request):
-    return render (request, 'home/index.html')
+    events = Event.objects.all().filter(category__name="Konzert")
+    context = { 'events': events }
+    return render (request, 'home/index.html', context)
 
 def contact (request):
     return render (request, 'home/contact.html')

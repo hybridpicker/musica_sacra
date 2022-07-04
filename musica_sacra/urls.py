@@ -15,4 +15,6 @@ urlpatterns = [
     path('karten/', home.views.prices, name='prices_view'),
     path('impressum/', home.views.impressum, name='impressum_view'),
     path('intern/', include('users.urls')),
+    # Get Single Event View
+    path('<published_year>/<slug>/', events.views.EventView.as_view(), name='event_detail'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
