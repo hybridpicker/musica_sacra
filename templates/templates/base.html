@@ -10,17 +10,50 @@
   {% endif %}
   <!-- Viewport Settings -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <!-- critical CSS -->
   <style type="text/css">
-      @font-face { 
+    /**
+    * @license
+    * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+    * 
+    * The fonts listed in this notice are subject to the End User License
+    * Agreement(s) entered into by the website owner. All other parties are 
+    * explicitly restricted from using the Licensed Webfonts(s).
+    * 
+    * You may obtain a valid license at the URLs below.
+    * 
+    * Webfont: Uniform Black by Miller Type Foundry
+    * URL: https://www.myfonts.com/products/black-uniform-162423
+    * Copyright: Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+    * 
+    * 
+    * 
+    * © 2020 MyFonts Incn*/
+    @font-face { 
       font-family: 'Uniform'; 
-      src: url({% static 'fonts/uniform_black.otf' %}) format('truetype');
+      src: url({% static 'fonts/uniform_black.woff' %}) format('truetype');
       font-weight: bold;
       font-style: normal
     }
+    /**
+    * @license
+    * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+    * 
+    * The fonts listed in this notice are subject to the End User License
+    * Agreement(s) entered into by the website owner. All other parties are 
+    * explicitly restricted from using the Licensed Webfonts(s).
+    * 
+    * You may obtain a valid license at the URLs below.
+    * 
+    * Webfont: Uniform Condensed Regular by Miller Type Foundry
+    * URL: https://www.myfonts.com/products/condensed-regular-uniform-162463
+    * Copyright: Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+    * 
+    * 
+    * 
+    * © 2020 MyFonts Incn*/
     @font-face { 
       font-family: 'Uniform'; 
-      src: url({% static 'fonts/uniform_condensed_regular.otf' %}) format('truetype');
+      src: url({% static 'fonts/uniform_condensed_regular.woff' %}) format('truetype');
       font-weight: normal;
       font-style: normal
     }
@@ -29,7 +62,7 @@
   <!--- Bootstrap -->
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" onload="this.onload = null; this.rel='stylesheet';">
   <!-- CSS -->
-  <link rel="preload" href="{% static 'css/sacra.0.4.css' %}" type="text/css" as="style" onload="this.onload = null; this.rel='stylesheet';"/>
+  <link rel="preload" href="{% static 'css/sacra.0.5.css' %}" type="text/css" as="style" onload="this.onload = null; this.rel='stylesheet';"/>
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="{% static 'favicon/apple-icon-57x57.png' %}">
   <link rel="apple-touch-icon" sizes="60x60" href="{% static 'favicon/apple-icon-60x60.png' %}">
