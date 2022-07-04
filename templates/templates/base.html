@@ -10,17 +10,50 @@
   {% endif %}
   <!-- Viewport Settings -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <!-- critical CSS -->
+  <!-- Uniform Condensed Regular License: -->
+  <!--
+  /**
+  * @license
+  * MyFonts Webfont Build ID 197879
+  *
+  * The fonts listed in this notice are subject to the End User License
+  * Agreement(s) entered into by the website owner. All other parties are
+  * explicitly restricted from using the Licensed Webfonts(s).
+  *
+  * You may obtain a valid license from one of MyFonts official sites.
+  * http://www.fonts.com
+  * http://www.myfonts.com
+  * http://www.linotype.com
+  *
+  */
+  -->
+  <!-- Uniform Black License: -->
+  <!--
+  /**
+  * @license
+  * MyFonts Webfont Build ID 577141
+  *
+  * The fonts listed in this notice are subject to the End User License
+  * Agreement(s) entered into by the website owner. All other parties are
+  * explicitly restricted from using the Licensed Webfonts(s).
+  *
+  * You may obtain a valid license from one of MyFonts official sites.
+  * http://www.fonts.com
+  * http://www.myfonts.com
+  * http://www.linotype.com
+  *
+  */
+  -->
   <style type="text/css">
       @font-face { 
       font-family: 'Uniform'; 
-      src: url({% static 'fonts/uniform_black.otf' %}) format('truetype');
+      src: url({% static 'fonts/uniform_black.woff' %}) format('truetype');
       font-weight: bold;
       font-style: normal
     }
     @font-face { 
       font-family: 'Uniform'; 
-      src: url({% static 'fonts/uniform_condensed_regular.otf' %}) format('truetype');
+      src: url({% static 'fonts/uniform_condensed_regular.woff' %}) format('truetype');
       font-weight: normal;
       font-style: normal
     }
@@ -29,7 +62,7 @@
   <!--- Bootstrap -->
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" onload="this.onload = null; this.rel='stylesheet';">
   <!-- CSS -->
-  <link rel="preload" href="{% static 'css/sacra.0.4.css' %}" type="text/css" as="style" onload="this.onload = null; this.rel='stylesheet';"/>
+  <link rel="preload" href="{% static 'css/sacra.0.5.css' %}" type="text/css" as="style" onload="this.onload = null; this.rel='stylesheet';"/>
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="{% static 'favicon/apple-icon-57x57.png' %}">
   <link rel="apple-touch-icon" sizes="60x60" href="{% static 'favicon/apple-icon-60x60.png' %}">
