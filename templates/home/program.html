@@ -51,6 +51,9 @@
                 {% if event.text %}
                 <p>{{ event.text|linebreaks }}</p>
                 {% endif %}
+                {% if event.ticket_url %}
+                <p>Tickets: <a href="{{ event.ticket_url }}">https://oeticket.com</a></p>
+                {% endif %}
               </div>
 
           </div>
