@@ -19,13 +19,13 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Alles über das Musik-Festival Musica Sacra">
 <meta property="og:description" content="{{ event.content_lead }}">
-<meta property="og:image" content="{% static 'meta/sacra.jpg' %}">
+<meta property="og:image" content="{{ event.image }}">
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ event.content_title }}">
 <meta name="twitter:description" content="{{ event.content_lead }}">
-<meta name="twitter:image" content="{% static 'meta/sacra.jpg' %}">
+<meta name="twitter:image" content="{{ event.image }}">
 {% endblock %}
 
 
