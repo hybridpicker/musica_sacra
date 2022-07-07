@@ -2,39 +2,53 @@
 
 {% load static %}
 
+{% load thumbnail %}
+
 {% block extra_head %}
 <!-- HTML Meta Tags -->
-<title>{{event.name}}</title>
+<title>{{ event.content_title }}</title>
 <meta name="description" content="{{ event.text }}">
 
 <!-- Google / Search Engine Tags -->
-<meta itemprop="name" content="{{event.name}}">
-<meta itemprop="description" content="Alles über das Musik-Festival Musica Sacra - Mitwirkende, kurze Presseinformation, Hintergrundinformationen">
+<meta itemprop="name" content="{{ event.content_title }}">
+<meta itemprop="description" content="{{ event.content_lead }}">
 <meta itemprop="image" content="{% static 'meta/sacra.jpg' %}">
 
 <!-- Facebook Meta Tags -->
 <meta property="og:url" content="https://festival-musica-sacra.at/{{event.published_year}}/{{event.slug}}">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Alles über das Musik-Festival Musica Sacra">
-<meta property="og:description" content="Alles über das Musik-Festival Musica Sacra - Mitwirkende, kurze Presseinformation, Hintergrundinformationen">
-<meta property="og:image" content="{% static 'meta/sacra.jpg' %}">
+<meta property="og:title" content="{{ event.title }}">
+<meta property="og:description" content="{{ event.content_lead }}">
+<meta property="og:image" content="{{ event.image }}">
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Alles über das Musik-Festival Musica Sacra">
-<meta name="twitter:description" content="Alles über das Musik-Festival Musica Sacra - Mitwirkende, kurze Presseinformation, Hintergrundinformationen">
-<meta name="twitter:image" content="{% static 'meta/sacra.jpg' %}">
+<meta name="twitter:title" content="{{ event.content_title }}">
+<meta name="twitter:description" content="{{ event.content_lead }}">
+<meta name="twitter:image" content="{{ event.image }}">
 {% endblock %}
 
 
 {% block body %}
+<div class="single-event-container">
+    <h1>{{ event.content_title }}</h1>
+    <p>{{ event.content_lead }}</p>
+    <!--- Banner -->
+    {% thumbnail event.image "1010x500" crop="center" format="JPEG" as im %}
+    <img id="banner-screen" src="{{ im.url }}" alt="">
+    {% endthumbnail %}
 
-{{ event.content.html|safe }}
+    {% thumbnail event.image "650x445" crop="center" format="JPEG" as im %}
+    <img id="banner-mobile" src="{{ im.url }}" alt="">
+    {% endthumbnail %}
 
-{% if event.ticket_url %}
-<h2>KARTEN</h2>
-<p>Karten sind ab sofort online erhältlich unter: <a href="{{ event.ticket_url }}">https://oeticket.com</a></p>
-{% endif %}
+    {{ event.content.html|safe }}
+
+    {% if event.ticket_url %}
+    <h2>KARTEN</h2>
+    <p>Karten sind ab sofort online erhältlich unter: <a target="_blank" href="{{ event.ticket_url }}">https://oeticket.com</a></p>
+    {% endif %}
+</div>
 {% endblock %}
 {% block footer %}
 

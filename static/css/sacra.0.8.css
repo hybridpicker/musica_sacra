@@ -627,3 +627,30 @@ main.musica-container .events-index-grid > a{
         gap: 2rem;
     }
 }
+.single-event-container h2{
+    font-size: 2rem;
+    margin-top: 0;
+}
+.single-event-container h1{
+    margin-bottom: 1rem !important;
+}
+.single-event-container img#banner-mobile{
+    display:none;
+}
+.single-event-container img{
+    margin-bottom: 1rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (max-width: 650px) {
+    .single-event-container img#banner-mobile{
+        display:flex;
+    }
+    .single-event-container img#banner-screen{
+        display:none;
+    }
+    .single-event-container h2{
+        font-size: 1.5rem;
+    }
+}
