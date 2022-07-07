@@ -43,10 +43,13 @@ class Event(models.Model):
     time = models.TimeField(_("Event Time "), db_index=True,
                             null=True, blank=True)
     text = models.TextField(null=True, blank=True)
+    content_title = models.TextField(null=True, blank=True)
+    content_lead = models.TextField(null=True, blank=True)
     content = QuillField(null=True, blank=True)
     published_year = models.IntegerField(_('Year of Article'), default=current_year())
     slug = models.SlugField(_("slug"), max_length=200, unique=True, null=True)
     image = models.ImageField(upload_to='events/images/', null=True)
+    image_desc = models.TextField(null=True, blank=True)
     ticket_url = models.URLField(_(u'Ticket URL Seite'), blank=True, max_length=80)
 
     def get_date_presentation(self):

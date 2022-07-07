@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load thumbnail %}
+
 {% block extra_head %}
 <!-- HTML Meta Tags -->
 <title>{{event.name}}</title>
@@ -28,13 +30,25 @@
 
 
 {% block body %}
+<div class="single-event-container">
+    <h1>{{ event.content_title }}</h1>
+    <p>{{ event.content_lead }}</p>
+    <!--- Banner -->
+    {% thumbnail event.image "1010x500" crop="center" format="JPEG" as im %}
+    <img id="banner-screen" src="{{ im.url }}" alt="">
+    {% endthumbnail %}
 
-{{ event.content.html|safe }}
+    {% thumbnail event.image "650x445" crop="center" format="JPEG" as im %}
+    <img id="banner-mobile" src="{{ im.url }}" alt="">
+    {% endthumbnail %}
 
-{% if event.ticket_url %}
-<h2>KARTEN</h2>
-<p>Karten sind ab sofort online erhältlich unter: <a target="_blank" href="{{ event.ticket_url }}">https://oeticket.com</a></p>
-{% endif %}
+    {{ event.content.html|safe }}
+
+    {% if event.ticket_url %}
+    <h2>KARTEN</h2>
+    <p>Karten sind ab sofort online erhältlich unter: <a target="_blank" href="{{ event.ticket_url }}">https://oeticket.com</a></p>
+    {% endif %}
+</div>
 {% endblock %}
 {% block footer %}
 
