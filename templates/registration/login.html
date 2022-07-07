@@ -21,10 +21,9 @@
 {% block title %}Login{% endblock %}
 
 {% block body %}
-<div class="mbs">
   <div class="container">
     <h2>Login</h2>
-    <form method="post"id="login-mks-form">
+    <form method="post"id="login-sacra-form">
       {% csrf_token %}
       <div class="user-text">
         <p>Benutzername:</p>
@@ -56,9 +55,8 @@
           </div>
       {% endfor %}
     {% endif %}
-    <p><a href="/team/password_reset">Passwort vergessen?</a></p>
+    <p><a href="/intern/password_reset">Passwort vergessen?</a></p>
   </div>
-</div>
 {% endblock %}
 
 
