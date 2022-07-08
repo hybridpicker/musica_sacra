@@ -86,11 +86,10 @@ def create_event(request):
                               published_year=published_year,
                               ticket_url=ticket_url)
             new_event.save()
+            print('NEW SAVED')
             # redirect to a event_url:
             return redirect('event_thanks')
             # if a GET (or any other method) we'll create a blank form
-        else:
-            form = EventForm()
     context = {
         'form': form
         }

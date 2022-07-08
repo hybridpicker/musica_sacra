@@ -718,3 +718,7 @@ header#user_nav ul.nav-pills{
 form > p{
     display: flex;
 }
+ul.errorlist li{
+    font-weight: bold;
+    text-align: center;
+}
