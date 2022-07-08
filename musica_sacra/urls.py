@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 import home.views
 import events.views
 
@@ -17,4 +17,5 @@ urlpatterns = [
     path('intern/', include('users.urls')),
     # Get Single Event View
     path('<published_year>/<slug>/', events.views.EventView.as_view(), name='event_detail'),
+    re_path(r'^eventedit/', include('events.edit_urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

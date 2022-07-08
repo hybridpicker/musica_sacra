@@ -2,12 +2,9 @@
     <a id="sacraHamburger" onclick="openNav()">
         {% include "svg/hamburger.html" %}
     </a>
-    <a href="{% url 'home_view' %}" class="d-flex align-items-center mb-4 mb-md-0 me-md-auto text-dark text-decoration-none">
-      <span class="fs-4">{% include "svg/logo.html" %}</span>
-    </a>
 
     <ul class="nav nav-pills text-black">
-      <li class="nav-item"><a href="/" class="nav-link">Veranstaltungen</a></li>
+      <li class="nav-item"><a href="{% url 'show_events_editing' %}" class="nav-link">Veranstaltungen</a></li>
       <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
     </ul>
     <div id="sacra-nav-mobile-menu" class="mobileSacraNav">

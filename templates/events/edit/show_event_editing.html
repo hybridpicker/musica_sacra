@@ -1,0 +1,74 @@
+{% extends "templates/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+
+<style media="screen">
+  .mti img {
+    max-width: 75%;
+    height: auto;
+  }
+  .tmcb {
+    min-height: 520px;
+    grid-template-areas: 'mti mti';
+  }
+  @media only screen and (max-width: 1080px) {
+    .tmcb {
+      grid-template-areas:
+      'mti';
+    }
+  }
+  @media only screen and (max-width: 410px) {
+    .container {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .tmcb {
+      width: 100%;
+    }
+  }
+</style>
+
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+{% block banner %}
+
+{% endblock %}
+{% block body %}
+  <div class="container">
+    {% if all_events %}
+    <a href="{% url 'create_event' %}"><button type="button" name="button" style="margin-right: unset;">
+    + Neues Konzert
+    </button></a>
+    <h1>Veröffentlichte Veranstaltungen</h1>
+    <div class="tmcon">
+      <div class="tmcb">
+        {% for event in all_events %}
+        <div class="tmcbpb">
+          <div class="mti">
+            <a href="{{event.id}}/edit">
+              <h2>{{ event.name }}</h2>
+            </a>
+            <div class="tctm">
+              <p>{{ event.content.html|safe|truncatewords:30   }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% else %}
+    <h2>Derzeit sind noch keine Veranstaltungen vorhanden</h2>
+    <h3>Starten Sie jetzt mit Ihrem ersten Eintrag:</h3>
+    <a href="{% url 'create_event' %}"><button type="button" name="button">
+    + Neuer Blog-Eintrag
+    </button></a>
+    {% endif %}
+  {% endblock %}
+  {% block footer %}
+
+  {% endblock %}
