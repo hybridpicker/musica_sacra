@@ -48,22 +48,43 @@ def create_event(request):
         form = EventForm(request.POST, request.FILES)
         # check whether it's valid:
         if form.is_valid():
-            title = form.cleaned_data['title']
-            lead_paragraph = form.cleaned_data['lead_paragraph']
+            name = form.cleaned_data['name']
+            category = form.cleaned_data['category']
+            composer = form.cleaned_data['composer']
+            contributing = form.cleaned_data['contributing']
             content = form.cleaned_data['content']
-            title = request.POST['title']
-            lead_paragraph = request.POST['lead_paragraph']
+            image = form.cleaned_data['image']
+            image_desc = form.cleaned_data['image_desc']
+            content = form.cleaned_data['content']
+            content_lead = form.cleaned_data['content_lead']
+            text = form.cleaned_data['text']
+            slug = form.cleaned_data['slug']
+            published_year = form.cleaned_data['published_year']
+            ticket_url = form.cleaned_data['ticket_url']
+            # request DATA
+            name = request.POST['name']
+            composer = request.POST['composer']
+            contributing = request.POST['contributing']
             image = request.FILES['image']
+            image_desc = request.POST['image_desc']
             content = request.POST['content']
-            #create slug from title-input
-            slug = create_slug_text(title)
-            new_event = Event(title=title,
-                                lead_paragraph=lead_paragraph,
-                                image=image,
-                                slug=slug,
-                                meta_title=title,
-                                meta_description=lead_paragraph,
-                                content=content)
+            content_lead = request.POST['content_lead']
+            text = request.POST['text']
+            published_year = request.POST['published_year']
+            ticket_url = request.POST['ticket_url']
+            slug = request.POST['slug']
+            new_event = Event(name=name,
+                              category=category,
+                              composer=composer,
+                              contributing=contributing,
+                              image=image,
+                              image_desc=image_desc,
+                              slug=slug,
+                              content=content,
+                              content_lead=content_lead,
+                              text=text,
+                              published_year=published_year,
+                              ticket_url=ticket_url)
             new_event.save()
             # redirect to a event_url:
             return redirect('event_thanks')
@@ -74,3 +95,7 @@ def create_event(request):
         'form': form
         }
     return render(request, "events/edit/form.html", context)
+
+@login_required(login_url='/intern/login/')
+def event_thanks(request):
+    return render(request, "events/edit/form_thanks.html")

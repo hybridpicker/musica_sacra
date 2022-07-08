@@ -22,6 +22,10 @@ p, a, li, ul{
     list-style-type: none;
     line-height: 1.7rem;
     letter-spacing: -0.01rem;
+    text-decoration: none;
+}
+button:hover, a:hover{
+    cursor: pointer;
 }
 h2{
     font-size: 2.5rem;
@@ -699,10 +703,18 @@ button{
 #login-sacra-form > .user-login {
     grid-area: loginSave; }
 
-input{
-    width: 100%;
+form input{
+    width: 70%;
     height: 1.75rem;
+    margin-left: auto;
+}
+form textarea, form select{
+    width: 70%;
+    margin-left: auto;
 }
 header#user_nav ul.nav-pills{
    margin-left: auto;
+}
+form > p{
+    display: flex;
 }
