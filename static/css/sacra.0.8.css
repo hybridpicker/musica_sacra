@@ -705,7 +705,7 @@ button{
 
 form input{
     width: 70%;
-    height: 1.75rem;
+    height: 2rem;
     margin-left: auto;
 }
 form textarea, form select{
@@ -717,8 +717,23 @@ header#user_nav ul.nav-pills{
 }
 form > p{
     display: flex;
+    padding-bottom: 0.5rem;
 }
-ul.errorlist li{
-    font-weight: bold;
+form > p:first-of-type{
+    margin-top: 2rem;
+}
+.alert.alert-error:last-of-type{
+    margin-bottom: 2rem;
+}
+.alert.alert-error strong, form p strong{
     text-align: center;
+    font-weight: bold;
+    font-family: 'Uniform';
+}
+form ul.errorlist li{
+    display:none;
+}
+.alert.alert-error p{
+    margin: 0;
+    text-align: left;
 }

@@ -12,9 +12,6 @@
 {% endblock %}
 
 {% block banner %}
-<img src="/static/banner/team_banner.jpg" alt="">
-<img id="mbimg" src="/static/banner/mobile/team_banner.jpg" alt="">
-
 {% endblock %}
 
 {% block title %}Registrierung{% endblock %}
@@ -23,16 +20,57 @@
 <div class="mbs">
   <div class="container">
     {% if user.is_authenticated %}
-    <p>Willkommen, {{ user }}!</p>
     <h2>Registrierung</h2>
     <form method="post">
       {% csrf_token %}
-      {{ form.as_p }}
+      {% if form.errors %}
+      <p><strong>Fehlermeldung:</strong></p>
+      {% for field in form %}
+          {% for error in field.errors %}
+              <div class="alert alert-error">
+                  <p>
+                    <strong>{{ field.label }}: </strong>{{ error|escape }}
+                  </p>
+              </div>
+          {% endfor %}
+      {% endfor %}
+      {% for error in form.non_field_errors %}
+          <div class="alert alert-error">
+            <p>
+              <strong>{{ field.label }}: </strong>{{ error|escape }}
+            </p>
+          </div>
+      {% endfor %}
+      {% endif %} 
+      <p>
+        <label for="form.username.name">Benutzername:</label>
+        {{ form.username}}
+      </p>
+      <p>
+        <label for="form.first_name.name">Vorname:</label>
+        {{ form.first_name }}
+      </p>
+      <p>
+        <label for="form.last_name.name">Nachname:</label>
+        {{ form.last_name }}
+      </p>   
+      <p>
+        <label for="form.email.name">Email:</label>
+        {{ form.email }}
+      </p>
+      <p>
+        <label for="form.password.name">Passwort:</label>
+        {{ form.password1 }}
+      </p>
+      <p>
+        <label for="form.password2.name">Passwort:</label>
+        {{ form.password2 }}
+      </p>     
       <button type="submit">Sign up</button>
     </form>
     {% else %}
     <h2>Sie sind nicht angemeldet</h2>
-    <a href="/team/login">
+    <a href="/intern/login">
       <button type="button" name="button">
         Log In
       </button>
