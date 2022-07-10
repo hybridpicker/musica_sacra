@@ -65,7 +65,11 @@ def create_event(request):
             name = request.POST['name']
             composer = request.POST['composer']
             contributing = request.POST['contributing']
-            image = request.FILES['image']
+            import traceback
+            try:
+                image = request.FILES['image']
+            except Exception as e:
+                print(type(e))
             image_desc = request.POST['image_desc']
             content = request.POST['content']
             content_lead = request.POST['content_lead']
