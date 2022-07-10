@@ -67,7 +67,7 @@ def create_event(request):
             contributing = request.POST['contributing']
             import traceback
             try:
-                image = request.FILES['image']
+                image = form.cleaned_data['image']
             except Exception as e:
                 print(type(e))
             image_desc = request.POST['image_desc']
