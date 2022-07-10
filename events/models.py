@@ -8,6 +8,9 @@ import datetime
 #Quill Editor
 from django_quill.fields import QuillField
 
+#Sorl Thumbnail
+from sorl.thumbnail import ImageField
+
 # Create your models here.
 class EventCategory(models.Model):
     name = models.CharField(_(u'Name of Category'), max_length=100)
@@ -48,7 +51,7 @@ class Event(models.Model):
     content = QuillField(_("Beitragsinhalt"),null=True, blank=True)
     published_year = models.IntegerField(_('Jahr der Veranstaltung'), default=current_year())
     slug = models.SlugField(_("Slug"), max_length=200, unique=True, null=True)
-    image = models.ImageField(_("Beitragsbild"), upload_to='events/images/', null=True, blank=True)
+    image = ImageField(_("Beitragsbild"), upload_to='events/images/', null=True, blank=True)
     image_desc = models.TextField(_("Bildbezeichnung"), null=True, blank=True)
     ticket_url = models.URLField(_(u'Ticketseite URL'), blank=True, max_length=80)
 
