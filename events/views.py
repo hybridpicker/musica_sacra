@@ -31,7 +31,7 @@ def show_events_editing(request):
 def event_edit(request, pk):
     post = get_object_or_404(Event, pk=pk)
     if request.method == "POST":
-        form = EventForm(request.POST, instance=post)
+        form = EventForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save(commit=False)
             post.save()
@@ -48,48 +48,8 @@ def create_event(request):
         form = EventForm(request.POST, request.FILES)
         # check whether it's valid:
         if form.is_valid():
-            name = form.cleaned_data['name']
-            category = form.cleaned_data['category']
-            composer = form.cleaned_data['composer']
-            contributing = form.cleaned_data['contributing']
-            content = form.cleaned_data['content']
-            image = form.cleaned_data['image']
-            image_desc = form.cleaned_data['image_desc']
-            content = form.cleaned_data['content']
-            content_lead = form.cleaned_data['content_lead']
-            text = form.cleaned_data['text']
-            slug = form.cleaned_data['slug']
-            published_year = form.cleaned_data['published_year']
-            ticket_url = form.cleaned_data['ticket_url']
-            # request DATA
-            name = request.POST['name']
-            composer = request.POST['composer']
-            contributing = request.POST['contributing']
-            import traceback
-            try:
-                image = form.cleaned_data['image']
-            except Exception as e:
-                print(type(e))
-            image_desc = request.POST['image_desc']
-            content = request.POST['content']
-            content_lead = request.POST['content_lead']
-            text = request.POST['text']
-            published_year = request.POST['published_year']
-            ticket_url = request.POST['ticket_url']
-            slug = request.POST['slug']
-            new_event = Event(name=name,
-                              category=category,
-                              composer=composer,
-                              contributing=contributing,
-                              image=image,
-                              image_desc=image_desc,
-                              slug=slug,
-                              content=content,
-                              content_lead=content_lead,
-                              text=text,
-                              published_year=published_year,
-                              ticket_url=ticket_url)
-            new_event.save()
+            event = form.save(commit=False)
+            event.save()
             # redirect to a event_url:
             return redirect('event_thanks')
             # if a GET (or any other method) we'll create a blank form
