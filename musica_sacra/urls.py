@@ -18,6 +18,4 @@ urlpatterns = [
     # Get Single Event View
     path('<published_year>/<slug>/', events.views.EventView.as_view(), name='event_detail'),
     re_path(r'^eventedit/', include('events.edit_urls')),
-    #Debug Toolbar
-    path('__debug__/', include('debug_toolbar.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

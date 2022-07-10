@@ -2,7 +2,6 @@ asgiref==3.4.1
 certifi==2021.5.30
 Django==3.2
 django-allauth
-django-debug-toolbar 
 django-quill-editor
 pillow
 sorl-thumbnail
