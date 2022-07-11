@@ -118,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'de-de'
 
 TIME_ZONE = 'UTC'
 
@@ -131,7 +131,7 @@ USE_TZ = True
 AUTH_USER_MODEL = 'users.CustomUser'
 
 #LOGIN SUCESS TO URL
-LOGIN_REDIRECT_URL = '/team/'
+LOGIN_REDIRECT_URL = '/intern/'
 
 #LOGUT
 LOGOUT_REDIRECT_URL = '/'
@@ -160,6 +160,11 @@ STATICFILES_FINDERS = [
 FIXTURE_DIRS = [
     os.path.join(BASE_DIR, 'fixtures'),
 ]
+
+#Mail Settings
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

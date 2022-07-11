@@ -8,6 +8,9 @@ import datetime
 #Quill Editor
 from django_quill.fields import QuillField
 
+#Sorl Thumbnail
+from sorl.thumbnail import ImageField
+
 # Create your models here.
 class EventCategory(models.Model):
     name = models.CharField(_(u'Name of Category'), max_length=100)
@@ -33,24 +36,24 @@ class Event(models.Model):
     Model holding events data
     '''
     category = models.ForeignKey(EventCategory, on_delete=models.CASCADE, blank=True, null=True)
-    name = models.CharField(_(u'Name of Event'), max_length=100)
-    composer = models.CharField(_(u'Composer'), max_length=500, blank=True)
-    contributing = models.CharField(_(u'Contributing'), max_length=500, blank=True)
-    venue = models.CharField(_(u'Venue'), max_length=80, blank=True)
+    name = models.CharField(_(u'Titel Veranstaltung'), max_length=100)
+    composer = models.CharField(_(u'Komponisten'), max_length=500, blank=True)
+    contributing = models.CharField(_(u'Mitwirkende'), max_length=500, blank=True)
+    venue = models.CharField(_(u'Spielort'), max_length=80, blank=True)
     date = models.DateField(
-        _("date for event"),
+        _("Datum"),
         default=datetime.date.today, blank=True)
-    time = models.TimeField(_("Event Time "), db_index=True,
+    time = models.TimeField(_("Uhrzeit"), db_index=True,
                             null=True, blank=True)
-    text = models.TextField(null=True, blank=True)
-    content_title = models.TextField(null=True, blank=True)
-    content_lead = models.TextField(null=True, blank=True)
-    content = QuillField(null=True, blank=True)
-    published_year = models.IntegerField(_('Year of Article'), default=current_year())
-    slug = models.SlugField(_("slug"), max_length=200, unique=True, null=True)
-    image = models.ImageField(upload_to='events/images/', null=True)
-    image_desc = models.TextField(null=True, blank=True)
-    ticket_url = models.URLField(_(u'Ticket URL Seite'), blank=True, max_length=80)
+    text = models.TextField(_("Zusätzl. Veranstaltungstext"), null=True, blank=True)
+    content_title = models.TextField(_("Beitragstitel"), null=True, blank=True)
+    content_lead = models.TextField(_("Beitragslead"), null=True, blank=True)
+    content = QuillField(_("Beitragsinhalt"),null=True, blank=True)
+    published_year = models.IntegerField(_('Jahr der Veranstaltung'), default=current_year())
+    slug = models.SlugField(_("Slug"), max_length=200, unique=True, null=True)
+    image = ImageField(_("Beitragsbild"), upload_to='events/images/', null=True, blank=True)
+    image_desc = models.TextField(_("Bildbezeichnung"), null=True, blank=True)
+    ticket_url = models.URLField(_(u'Ticketseite URL'), blank=True, max_length=80)
 
     def get_date_presentation(self):
         tp = self.date

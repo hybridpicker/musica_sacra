@@ -22,6 +22,10 @@ p, a, li, ul{
     list-style-type: none;
     line-height: 1.7rem;
     letter-spacing: -0.01rem;
+    text-decoration: none;
+}
+button:hover, a:hover{
+    cursor: pointer;
 }
 h2{
     font-size: 2.5rem;
@@ -653,4 +657,83 @@ main.musica-container .events-index-grid > a{
     .single-event-container h2{
         font-size: 1.5rem;
     }
+}
+/* User Interface */
+button{
+    width: auto;
+    height: auto;
+    background-color: #00afdb;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 1rem;
+    padding: 1rem;
+}
+#login-sacra-form {
+    display: grid;
+    grid-template-areas: "userText userInput userInput userInput" "passwordText passwordInput passwordInput passwordInput" "loginSave loginSave loginSave loginSave"; 
+    margin: auto;
+    width: 50%;
+    margin-top: 4rem;}
+  
+#login-sacra-form > .user-text {
+    grid-area: userText; }
+  
+#login-sacra-form > .user-text > p {
+    margin-top: 0;
+    text-align: right; }
+  
+#login-sacra-form > .user-input {
+    grid-area: userInput; 
+    text-align: left;}
+  
+#login-sacra-form > .password-text {
+    grid-area: passwordText;}
+  
+#login-sacra-form > .password-text > p {
+    margin-top: 0;
+    text-align: right; }
+  
+#login-sacra-form > .password-input {
+    grid-area: passwordInput; 
+    text-align: left;}
+  
+#login-sacra-form > .user-login {
+    grid-area: loginSave; }
+
+form input{
+    width: 70%;
+    height: 2rem;
+    margin-left: auto;
+}
+form textarea, form select{
+    width: 70%;
+    margin-left: auto;
+}
+header#user_nav ul.nav-pills{
+   margin-left: auto;
+}
+form > p{
+    display: flex;
+    padding-bottom: 0.5rem;
+}
+form > p:first-of-type{
+    margin-top: 2rem;
+}
+.alert.alert-error:last-of-type{
+    margin-bottom: 2rem;
+}
+.alert.alert-error strong, form p strong{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Uniform';
+}
+form ul.errorlist li{
+    display:none;
+}
+.alert.alert-error p{
+    margin: 0;
+    text-align: left;
 }
