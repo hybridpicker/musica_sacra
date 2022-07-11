@@ -273,7 +273,19 @@ footer .copyright{
 }
 .sacra-event-title, .sacra-event-venue {
     padding-left: 1%; }
-
+@media only screen and (max-width: 580px) {
+    .sacra-event-title > h2,
+    .sacra-event-date > h2{
+        font-size: 1.5rem;
+    }
+    .all-events-container p {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+    .event-container{
+        grid-template-columns: 1fr 3fr;
+    }
+}
 /* Prices Site */
 .prices-grid-container{
     display: grid;
