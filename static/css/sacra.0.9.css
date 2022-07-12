@@ -750,3 +750,12 @@ form ul.errorlist li{
     margin: 0;
     text-align: left;
 }
+.ql-toolbar button{
+    margin: unset;
+}
+.ql-toolbar > span{
+    margin: 0.5rem 0rem 0.5rem 0rem;
+}
+.django-quill-widget-container .ql-editor p{
+    margin-bottom: 1rem;
+}
