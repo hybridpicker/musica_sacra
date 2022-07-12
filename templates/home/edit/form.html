@@ -1,0 +1,66 @@
+{% extends "templates/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+<style media="screen">
+  .django-ckeditor-widget, #cke_id_content{
+      width:100% !important;
+  }
+  p{
+    padding:0;
+  }
+  #id_title{
+    width: 97%;
+  }
+  #id_lead_paragraph{
+    width:100%;
+  }
+</style>
+
+{% include 'django_quill/media.html' %}
+
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+{% block banner %}
+
+{% endblock %}
+{% block body %}
+<div class="mbs">
+  <div class="container">
+    <div class="event-edit">
+      <h1>Startseite</h1>
+      <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% if form.errors %}
+        <p><strong>Fehlermeldung:</strong></p>
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-error">
+                    <p>
+                      <strong>{{ field.label }}: </strong>{{ error|escape }}
+                    </p>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-error">
+              <p>
+                <strong>{{ field.label }}: </strong>{{ error|escape }}
+              </p>
+            </div>
+        {% endfor %}
+      {% endif %}  
+      {{ form.content }}
+      <a>
+      <button type="submit" name="form-save" onclick="return confirm('Wollen Sie wirklich diesen Eintrag abspeichern?');">Speichern</button>
+      </a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

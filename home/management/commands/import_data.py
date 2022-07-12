@@ -10,5 +10,6 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         call_command('loaddata', 'events/fixtures/dump_data.json')
         call_command('loaddata', 'users/fixtures/dump_data.json')
+        call_command('loaddata', 'home/fixtures/dump_data.json')
         result = {'message': "Successfully Loading initial data"}
         return json.dumps(result)
