@@ -4,7 +4,6 @@ from django.utils.translation import gettext as _
 
 import datetime
 
-
 #Quill Editor
 from django_quill.fields import QuillField
 
