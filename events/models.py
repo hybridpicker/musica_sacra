@@ -50,7 +50,7 @@ class Event(models.Model):
     content_lead = models.TextField(_("Beitragslead"), null=True, blank=True)
     content = QuillField(_("Beitragsinhalt"),null=True, blank=True)
     published_year = models.IntegerField(_('Jahr der Veranstaltung'), default=current_year())
-    slug = models.SlugField(_("Slug"), max_length=200, unique=True, null=True)
+    slug = models.SlugField(_("Slug"), max_length=200, unique=True, null=True, blank=True)
     image = ImageField(_("Beitragsbild"), upload_to='events/images/', null=True, blank=True)
     image_desc = models.TextField(_("Bildbezeichnung"), null=True, blank=True)
     ticket_url = models.URLField(_(u'Ticketseite URL'), blank=True, max_length=80)
