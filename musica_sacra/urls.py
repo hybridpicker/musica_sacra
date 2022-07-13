@@ -15,7 +15,9 @@ urlpatterns = [
     path('karten/', home.views.prices, name='prices_view'),
     path('impressum/', home.views.impressum, name='impressum_view'),
     path('intern/', include('users.urls')),
-    # Home Url
+    #Blog Urls
+    path('blog/', include('blog.urls')),
+    # Home Index Text Form Url
     path('index-text/edit/', home.views.index_text_edit, name='index_edit_detail'),
     # Get Single Event View
     path('<published_year>/<slug>/', events.views.EventView.as_view(), name='event_detail'),

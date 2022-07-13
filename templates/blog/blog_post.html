@@ -1,0 +1,95 @@
+{% extends "templates/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+
+{% load thumbnail %}
+
+<meta name="title" content="{{ blog_post.title }}">
+<meta name="description" content="{{ blog_post.meta_description }}">
+
+<!-- Social Media Meta --->
+<meta property="og:title" content="{{ blog_post.title }}">
+<meta property="og:description" content="{{ blog_post.meta_description }}">
+<meta property="og:image" content="{{blog_post.image.url}}">
+<meta property="og:url" content="https://musikschule-stp.at/blog/{{blog_post.published_year}}/{{blog_post.slug}}">
+
+<meta name="twitter:title" content="{{ blog_post.title }}">
+<meta name="twitter:description" content="{{ blog_post.meta_description }}">
+<meta name="twitter:image" content="{{blog_post.image.url}}">
+<meta name="twitter:card" content="summary_large_image">
+
+<style media="screen">
+.bs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bs > img {
+    width: 100%;
+}
+.youtube-grid{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+@media only screen and (max-width: 1120px) {
+  .bs > img {
+      width: 100%;
+  }
+  .youtube-grid{
+    padding: unset;
+  }
+}
+@media only screen and (max-width: 772px) {
+  .bs > img {
+      width: 100%;
+      padding-top: 3rem;
+  }
+}
+span {
+    text-decoration: none;
+}
+</style>
+
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+{% block banner %}
+
+{% thumbnail blog_post.image "1800x400" crop="center" format="JPEG" as im %}
+<img src="{{ im.url }}" alt="">
+{% endthumbnail %}
+
+{% thumbnail blog_post.image "758x240" crop="center" format="JPEG" as im %}
+<img id="mbimg" src="{{ im.url }}" alt="">
+{% endthumbnail %}
+
+{% endblock %}
+{% block body %}
+<div class="mbs">
+  <div class="container">
+    <div class="blogpost">
+      <h1>{{ blog_post.title }}</h1>
+      <div id="blogContent">
+        {{ blog_post.content|linebreaks }}
+      </div>
+    </div>
+    {% if youtube %}
+    <div class="youtube">
+      <div class="youtube-grid">
+        <iframe src="https://www.youtube.com/embed/{{ youtube }}"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+  {% endif %}
+  </div>
+</div>
+{% endblock %}
+{% block footer %}
+
+<!--- Blog JS --->
+<script src="{% static '/js/blog.js' %}"></script>
+
+{% endblock %}

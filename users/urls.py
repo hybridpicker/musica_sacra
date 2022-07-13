@@ -8,4 +8,7 @@ urlpatterns = [
     path('', UsersHomePageView.as_view(), name='user_home'),
     path('password/change', views.change_password, name='change_password'),
     path('password/sucess', views.change_password_success, name='change_password_success'),
+    #Blog Edit Urls
+    path('blog/', include('blog.edit_urls')),
+
 ]
