@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'django_quill',
      #thumbnails
     'sorl.thumbnail',
+    #Blog App
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [

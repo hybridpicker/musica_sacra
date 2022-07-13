@@ -1,0 +1,85 @@
+{% extends "templates/base.html" %}
+
+{% load static %}
+{% block extra_head %}
+<style media="screen">
+  p{
+    padding:0;
+  }
+  #id_lead_paragraph, #id_meta_description, #id_meta_title, #id_title{
+    width:100%;
+  }
+  form p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  main p:last-of-type{
+    margin-bottom: 2rem;
+  }
+</style>
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+{% block banner %}
+
+{% endblock %}
+{% block body %}
+<div class="mbs">
+  <div class="container">
+    <div class="blogpost">
+      <h1>Blogeintrag</h1>
+      <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% if form.errors %}
+      <p><strong>Fehlermeldung:</strong></p>
+      {% for field in form %}
+          {% for error in field.errors %}
+              <div class="alert alert-error">
+                  <p>
+                    <strong>{{ field.label }}: </strong>{{ error|escape }}
+                  </p>
+              </div>
+          {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-error">
+              <p>
+                <strong>{{ field.label }}: </strong>{{ error|escape }}
+              </p>
+            </div>
+        {% endfor %}
+      {% endif %}  
+      {{ form.media }}
+      <div class="form-title">
+        <p>Titel*: {{ form.title }}</p>
+      </div>
+      <div class="form-lead">
+        <p>Lead*: {{ form.lead_paragraph }}</p>
+      </div>
+      <div class="form-content">
+        <p>Text*:</p>
+        {{ form.content }}
+      </div>
+      <div class="form-image">
+        <p>Beitragsbild*: {{ form.image }}</p>
+      </div>
+      <h2>Meta Tags:</h2>
+      <div class="form-meta-title">
+        <p>Meta Title*: {{ form.meta_title }}</p>
+      </div>
+      <div class="form-meta-description">
+        <p>Meta Description*: {{ form.meta_description }}</p>
+      </div>
+      <a>
+      <button type="submit" name="form-save" onclick="return confirm('Wollen Sie wirklich diesen Eintrag abspeichern?');">Speichern</button>
+      </a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}
