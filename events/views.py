@@ -5,6 +5,8 @@ from django.views.generic import View
 from django.contrib.auth.decorators import login_required
 from events.forms import EventForm
 
+from home.slug import create_slug_text, get_year_presentation
+
 # Create your views here.
 def program (request):
     events = Event.objects.all()
@@ -49,6 +51,8 @@ def create_event(request):
         # check whether it's valid:
         if form.is_valid():
             event = form.save(commit=False)
+            event.slug = create_slug_text(request.POST['title'])
+            event.year = get_year_presentation(request.POST['date'])
             event.save()
             # redirect to a event_url:
             return redirect('event_thanks')

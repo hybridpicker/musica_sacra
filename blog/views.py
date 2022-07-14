@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 from blog.models import BlogPost
 from blog.forms import ArticleForm
 
-from django.utils.text import slugify
+from home.slug import create_slug_text
 
 # Create your views here.
 
@@ -53,17 +53,6 @@ def show_blogs_editing(request):
         'all_blogs': all_blogs
         }
     return render(request, "blog/edit/show_blog_editing.html", context)
-
-def create_slug_text(title):
-    # Remove space and make every character low #
-    title =  title.lower()
-    # Checking for special characters and transform #
-    chars = {'ö':'oe','ä':'ae','ü':'ue', 'ß':'ss',}
-    for char in chars:
-        title = title.replace(char,chars[char])
-    # Check for other special characters #
-    title = slugify(title)
-    return title
 
 @login_required(login_url='/team/login/')
 def create_blog(request):
