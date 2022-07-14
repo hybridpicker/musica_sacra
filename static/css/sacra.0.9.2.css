@@ -658,7 +658,7 @@ main.musica-container .events-index-grid > a{
 .single-event-container picture > *{
     display: flex;
     margin-bottom: 1rem;
-    max-width: 100%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
