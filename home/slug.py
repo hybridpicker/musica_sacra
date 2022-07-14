@@ -11,6 +11,6 @@ def create_slug_text(title):
     title = slugify(title)
     return title
 
- def get_year_presentation(self):
+def get_year_presentation(self):
     year = int(self.date.year)
     return year
