@@ -56,7 +56,7 @@ def show_blogs_editing(request):
 
 @login_required(login_url='/team/login/')
 def create_blog(request):
-    form = ArticleForm(request.POST)
+    form = ArticleForm()
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = ArticleForm(request.POST, request.FILES)
@@ -66,6 +66,8 @@ def create_blog(request):
             blog.slug = create_slug_text(request.POST['title'])
             blog.save()
             return redirect('blog_thanks')
+        else:
+            form = ArticleForm(request.POST)
     context = {
         'form': form
         }
