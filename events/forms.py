@@ -9,4 +9,4 @@ class EventForm(forms.ModelForm):
         model = Event
         fields = ['name', 'category', 'composer', 'contributing', 'venue', 'date', 
                 'text', 'content_title', 'content_lead', 'content', 'image', 'image_desc',
-                'ticket_url', 'slug', 'published_year']
+                'ticket_url']
