@@ -1,4 +1,5 @@
 from django.utils.text import slugify
+import datetime
 
 def create_slug_text(title):
     # Remove space and make every character low #
@@ -12,5 +13,6 @@ def create_slug_text(title):
     return title
 
 def get_year_presentation(self):
-    year = int(self.date.year)
+    year = datetime.datetime.strptime(self, "%d.%m.%Y").date()
+    year = int(year.year)
     return year

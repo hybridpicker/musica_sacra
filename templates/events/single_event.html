@@ -34,13 +34,21 @@
     <h1>{{ event.content_title }}</h1>
     <p>{{ event.content_lead }}</p>
     <!--- Banner -->
-    {% thumbnail event.image "1010x500" crop="center" format="JPEG" as im %}
-    <img id="banner-screen" src="{{ im.url }}" alt="">
-    {% endthumbnail %}
+    <picture>
+        {% thumbnail event.image "1010x500" crop="center" format="JPEG" as im %}
+        <source media="(min-width:1010px)" srcset="{{ im.url }}">
+        {% endthumbnail %}
+        {% thumbnail event.image "650x445" crop="center" format="JPEG" as im_m %}
+        <source media="(min-width:650px)" srcset="{{ im_m.url }}">
+        {% endthumbnail %}
+        {% thumbnail event.image "650x445" crop="center" format="JPEG" as im_sm %}
+        <img src="{{ im_sm.url }}" alt="{{ event.image_desc }}">
+        {% endthumbnail %}
 
-    {% thumbnail event.image "650x445" crop="center" format="JPEG" as im %}
-    <img id="banner-mobile" src="{{ im.url }}" alt="">
-    {% endthumbnail %}
+        {% if event.image_desc %}
+        <p>{{ event.image_desc }}</p>
+        {% endif %}
+    </picture> 
 
     {{ event.content.html|safe }}
 
