@@ -667,7 +667,7 @@ main.musica-container .events-index-grid > a{
     margin-bottom: 1rem !important;
     text-align: center;
     display: block;
-    background: gainsboro;
+    background: #dcdcdc70;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
