@@ -172,11 +172,11 @@ header{
 }
 main{
     margin-top: 6rem;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
 }
-main p{
-    padding-left: 10%;
-    padding-right: 10%;
+main p, .blog-index-grid, .events-index-grid{
+    padding-left: 5%;
+    padding-right: 5%;
 }
 main p:last-of-type{
     margin-bottom: 4rem;
@@ -196,7 +196,7 @@ footer .copyright{
     font-size: 1.2rem;
 }
 @media only screen and (max-width: 768px) {
-    main p{
+    main p, .blog-index-grid, .events-index-grid{
         padding-left: 2%;
         padding-right: 2%;
     }
@@ -575,24 +575,31 @@ slider {
 /* Event Index View */
 .events-index-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .events-index-grid > a > div{
     background: #088A52;
-    height: 30rem;
+    height: 20rem;
     padding-top: 1rem;
     background-position: center !important;
 }
-main.musica-container .events-index-grid > a{
+main.musica-container .events-index-grid > a,
+main.musica-container .blog-index-grid > a{
     color: white !important;
     text-decoration: none;
+    background: #088A52;
 }
-.events-index-grid h2{
+main.musica-container .blog-index-grid > a{
+    background: transparent;
+}
+.events-index-grid h3{
     text-align: left;
-    height: 100%; 
-    width: 10rem;
-    border-radius: 0 18rem 18rem 0;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 .circle-event{
     background: #088A52;
@@ -619,7 +626,7 @@ main.musica-container .events-index-grid > a{
 }
 @media only screen and (min-width: 1700px) {
     .events-index-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 6rem 4rem;
     }
 }
@@ -765,8 +772,8 @@ form ul.errorlist li{
     margin-bottom: 1rem;
 }
 .django-quill-widget-container{
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .ql-editor{
     min-height: 20rem;
@@ -813,24 +820,27 @@ form ul.errorlist li{
 /* Blog Index View */
 .blog-index-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .blog-index-grid > a > div{
-    background: #088A52;
-    height: 30rem;
-    padding-top: 1rem;
+    background: transparent;
+    height: 20rem;
+    border-radius: 100%;
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
     background-position: center !important;
 }
 main.musica-container .blog-index-grid > a{
-    color: white !important;
+    color: black !important;
     text-decoration: none;
 }
-.blog-index-grid h2{
-    text-align: left;
-    height: 100%; 
-    width: 10rem;
-    border-radius: 0 18rem 18rem 0;
+.blog-index-grid h3, .blog-index-grid p{
+    text-align: left !important;
+    padding: 0;
 }
 .blog-container {
     display: grid;

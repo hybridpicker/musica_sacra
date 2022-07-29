@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 def home (request):
     events = Event.objects.all().filter(category__name="Konzert")
-    blog_content = BlogPost.objects.all()
+    blog_content = BlogPost.objects.all()[0:6]
     index_text = IndexText.objects.all().first()
     context = { 'events': events ,
                 'blog_content': blog_content,

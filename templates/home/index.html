@@ -44,20 +44,19 @@
 
 {% if blog_content %}
 
-<h2>Aktuelles</h2>
+<h2>Blog Beiträge</h2>
 
 <div class="blog-index-grid">
     {% for blog in blog_content %}
-    <a href="/{{blog.published_year}}/{{blog.slug}}">
+    <a href="blog/{{blog.published_year}}/{{blog.slug}}">
     <div {% if blog.image %} 
-    {% thumbnail blog.image "950" crop="center" format="JPEG" as im %} 
+    {% thumbnail blog.image "700" crop="center" format="JPEG" as im %} 
     style="background: url({{ im.url }});"
     {% endthumbnail %}
     {% endif %}>
-        <div class="blog-title-index-grid">
-            <h3>{{ blog.title }}</h3>
-        </div>
     </div>
+    <h3>{{ blog.title }}</h3>
+    <p>{{ blog.meta_description|truncatewords:30 }}</p>
     </a>
     {% endfor %}
 </div>
@@ -73,10 +72,8 @@
     style="background: url({{ im.url }});"
     {% endthumbnail %}
     {% endif %}>
-        <div class="event-title-index-grid">
-            <h3>{{ event.name }}</h3>
-        </div>
     </div>
+    <h3>{{ event.name }}</h3>
     </a>
     {% endfor %}
 </div>
