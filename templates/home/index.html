@@ -42,6 +42,27 @@
 
 {{ index_text.content.html|safe }}
 
+{% if blog_content %}
+
+<h2>Aktuelles</h2>
+
+<div class="blog-index-grid">
+    {% for blog in blog_content %}
+    <a href="/{{blog.published_year}}/{{blog.slug}}">
+    <div {% if blog.image %} 
+    {% thumbnail blog.image "950" crop="center" format="JPEG" as im %} 
+    style="background: url({{ im.url }});"
+    {% endthumbnail %}
+    {% endif %}>
+        <div class="blog-title-index-grid">
+            <h3>{{ blog.title }}</h3>
+        </div>
+    </div>
+    </a>
+    {% endfor %}
+</div>
+{% endif %}
+
 <h2>Konzerte</h2>
 
 <div class="events-index-grid">
