@@ -50,8 +50,9 @@
         <p>{{ blog_post.image_desc }}</p>
         {% endif %}
     </picture> 
-
-    {{ blog_post.content.html|safe }}
+    <div class="justify-text">
+      {{ blog_post.content.html|safe }}
+    </div>
 </div>
 
 {% endblock %}

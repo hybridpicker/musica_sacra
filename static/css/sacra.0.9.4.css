@@ -24,6 +24,9 @@ p, a, li, ul{
     letter-spacing: -0.01rem;
     text-decoration: none;
 }
+p > b{
+    font-weight: bold;
+}
 button:hover, a:hover{
     cursor: pointer;
 }
@@ -82,7 +85,7 @@ header ul.nav-pills{
     width: 10rem;
     margin-left: 2rem;
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1000px) {
     #Logo_FMS{
         width: 8rem;
         margin-left: unset;
@@ -110,7 +113,7 @@ header .mobileSacraNav, header .mobileSacraNav ul.nav{
 #sacraHamburger{
     display: none;
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1000px) {
     header ul.nav{
         display:none;
     }
@@ -573,7 +576,16 @@ slider {
         display: none;
     }
 }
-
+@media (min-width: 768px){
+    .me-md-auto {
+        margin-right: unset !important;
+      }
+}
+@media (min-width: 1000px){
+    .me-md-auto {
+        margin-right: auto !important;
+      }
+}
 /* Event Index View */
 .events-index-grid {
     display: grid;
