@@ -122,7 +122,6 @@ header .mobileSacraNav, header .mobileSacraNav ul.nav{
         position: fixed;
         top: 0;
         background: white;
-        background: #ffffffde;
         padding-top: 4rem;
     }
     .mobileSacraNav ul li{
