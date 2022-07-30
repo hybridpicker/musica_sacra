@@ -151,6 +151,9 @@ header .mobileSacraNav, header .mobileSacraNav ul.nav{
         margin-right: 2rem;
     }
 }
+footer{
+    padding-bottom: 3rem;
+}
 footer a img{
     width: 2.5rem;
 }
@@ -651,18 +654,22 @@ main.musica-container .blog-index-grid > a{
         gap: 2rem;
     }
 }
-.single-event-container h2{
+.single-event-container h2,
+.single-post-container h2{
     font-size: 2rem;
     margin-top: 0;
 }
-.single-event-container h1{
+.single-event-container h1,
+.single-post-container h1{
     margin-bottom: 1rem !important;
 }
-.single-event-container picture{
+.single-event-container picture,
+.single-post-container picture{
     display: inline-block;
     margin-bottom: 1rem;
 }
-.single-event-container picture > *{
+.single-event-container picture > *
+.single-post-container > *{
     display: flex;
     margin-bottom: 1rem;
     width: 100%;
@@ -670,7 +677,8 @@ main.musica-container .blog-index-grid > a{
     margin-right: auto;
     margin-bottom: 0;
 }
-.single-event-container picture > p{
+.single-event-container picture > p,
+.single-post-container picture > p{
     margin-bottom: 1rem !important;
     text-align: center;
     display: block;
@@ -679,7 +687,8 @@ main.musica-container .blog-index-grid > a{
     padding-bottom: 0.5rem;
 }
 @media only screen and (max-width: 650px) {
-    .single-event-container h2{
+    .single-event-container h2,
+    .single-post-container h2{
         font-size: 1.5rem;
     }
 }
