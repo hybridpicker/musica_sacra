@@ -627,33 +627,6 @@ main.musica-container .blog-index-grid > a{
     margin-right: 50%;
     border-radius: 0 2rem 2rem 0;
 }
-@media only screen and (min-width: 1700px) {
-    .events-index-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 6rem 4rem;
-    }
-}
-@media only screen and (max-width: 900px) {
-    .events-index-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .events-index-grid > a > div{
-        height:20rem;
-    }
-}
-@media only screen and (max-width: 450px) {
-    .event-title-index-grid h3{
-        margin-right: 30%;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
-    .events-index-grid > a > div{
-        height: 18rem;
-    }
-    .events-index-grid{
-        gap: 2rem;
-    }
-}
 .single-event-container h2,
 .single-post-container h2{
     font-size: 2rem;
@@ -871,4 +844,36 @@ main.musica-container .blog-index-grid > a{
     padding-left: 1rem;
     margin-right: 50%;
     border-radius: 0 2rem 2rem 0;
+}
+@media only screen and (min-width: 1700px) {
+    .events-index-grid, .blog-index-grid{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6rem 4rem;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .events-index-grid, .blog-index-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 900px) {
+    .events-index-grid, .blog-index-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .events-index-grid > a > div{
+        height:20rem;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .event-title-index-grid h3{
+        margin-right: 30%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .events-index-grid > a > div{
+        height: 18rem;
+    }
+    .events-index-grid{
+        gap: 2rem;
+    }
 }
