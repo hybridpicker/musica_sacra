@@ -651,8 +651,9 @@ main.musica-container .blog-index-grid > a{
 .single-post-container picture{
     display: inline-block;
     margin-bottom: 1rem;
+    max-width: 1010px;
 }
-.single-event-container picture > *
+.single-event-container > picture > *
 .single-post-container > *{
     display: flex;
     margin-bottom: 1rem;
@@ -660,6 +661,16 @@ main.musica-container .blog-index-grid > a{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
+}
+@media only screen and (max-width: 1010px) {
+    .single-event-container > picture > *{
+        max-width: 650px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .single-event-container > picture > *{
+        max-width: 92vw;
+    }
 }
 .single-event-container picture > p,
 .single-post-container picture > p{

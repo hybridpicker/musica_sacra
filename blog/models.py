@@ -20,6 +20,7 @@ class BlogPost(models.Model):
     number_of_posts = models.IntegerField(null=True, blank=True)
     content = QuillField(_("Beitragsinhalt"))
     image = ImageField(_("Beitragsbild"), upload_to='blog/images/', null=True, blank=True)
+    image_desc = models.TextField(_("Bildbezeichnung"), null=True, blank=True)
     date = models.DateField(_(u"Blog Post Date"), default=timezone.now, blank=True)
     published_year = models.IntegerField(_('Year of Article'), default=current_year)
     meta_title = models.CharField(max_length=60)
