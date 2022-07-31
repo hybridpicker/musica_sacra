@@ -6,7 +6,8 @@
   p{
     padding:0;
   }
-  #id_lead_paragraph, #id_meta_description, #id_meta_title, #id_title{
+  #id_lead_paragraph, #id_meta_description, #id_meta_title, 
+  #id_title, #id_image_desc{
     width:100%;
   }
   form p{
@@ -64,6 +65,9 @@
       </div>
       <div class="form-image">
         <p>Beitragsbild*: {{ form.image }}</p>
+      </div>
+      <div class="form-meta image-desc">
+        <p>Bildbeschreibung: {{ form.image_desc }}</p>
       </div>
       <h2>Meta Tags:</h2>
       <div class="form-meta-title">

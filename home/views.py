@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from events.models import Event
+from blog.models import BlogPost
 from home.models import IndexText
 from home.forms import IndexTextForm
 from django.contrib.auth.decorators import login_required
@@ -7,8 +8,10 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 def home (request):
     events = Event.objects.all().filter(category__name="Konzert")
+    blog_content = BlogPost.objects.all()[0:6]
     index_text = IndexText.objects.all().first()
     context = { 'events': events ,
+                'blog_content': blog_content,
                 'index_text': index_text,}
     return render (request, 'home/index.html', context)
 
@@ -24,7 +27,6 @@ def impressum (request):
 def about (request):
     return render (request, 'home/about.html')
 
-
 @login_required(login_url='/intern/login')
 def index_text_edit(request):
     index_text = IndexText.objects.all().first()
@@ -37,3 +39,9 @@ def index_text_edit(request):
     else:
         form = IndexTextForm(instance=index_text)
     return render(request, 'home/edit/form.html', {'form': form})
+
+def view_404(request, *args, **kwargs):
+    return redirect('home_view')
+
+def view_500(request, *args, **kwargs):
+    return redirect('home_view')

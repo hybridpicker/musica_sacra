@@ -1,95 +1,61 @@
 {% extends "templates/base.html" %}
 
 {% load static %}
-{% block extra_head %}
 
 {% load thumbnail %}
 
-<meta name="title" content="{{ blog_post.title }}">
-<meta name="description" content="{{ blog_post.meta_description }}">
+{% block extra_head %}
 
-<!-- Social Media Meta --->
+<!-- HTML Meta Tags -->
+<title>{{ blog_post.content_title }}</title>
+<meta name="description" content="{{ blog_post.text }}">
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="{{ blog_post.content_title }}">
+<meta itemprop="description" content="{{ blog_post.content_lead }}">
+<meta itemprop="image" content="{% static 'meta/sacra.jpg' %}">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://festival-musica-sacra.at/{{blog_post.published_year}}/{{blog_post.slug}}">
+<meta property="og:type" content="website">
 <meta property="og:title" content="{{ blog_post.title }}">
-<meta property="og:description" content="{{ blog_post.meta_description }}">
-<meta property="og:image" content="{{blog_post.image.url}}">
-<meta property="og:url" content="https://musikschule-stp.at/blog/{{blog_post.published_year}}/{{blog_post.slug}}">
+<meta property="og:description" content="{{ blog_post.content_lead }}">
+<meta property="og:image" content="{{ blog_post.image }}">
 
-<meta name="twitter:title" content="{{ blog_post.title }}">
-<meta name="twitter:description" content="{{ blog_post.meta_description }}">
-<meta name="twitter:image" content="{{blog_post.image.url}}">
+<!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
-
-<style media="screen">
-.bs{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.bs > img {
-    width: 100%;
-}
-.youtube-grid{
-  padding-left: 5%;
-  padding-right: 5%;
-}
-@media only screen and (max-width: 1120px) {
-  .bs > img {
-      width: 100%;
-  }
-  .youtube-grid{
-    padding: unset;
-  }
-}
-@media only screen and (max-width: 772px) {
-  .bs > img {
-      width: 100%;
-      padding-top: 3rem;
-  }
-}
-span {
-    text-decoration: none;
-}
-</style>
+<meta name="twitter:title" content="{{ blog_post.content_title }}">
+<meta name="twitter:description" content="{{ blog_post.content_lead }}">
+<meta name="twitter:image" content="{{ blog_post.image }}">
 
 {% endblock %}
 
-{% block navbar %}
-{% endblock %}
-{% block banner %}
-
-{% thumbnail blog_post.image "1800x400" crop="center" format="JPEG" as im %}
-<img src="{{ im.url }}" alt="">
-{% endthumbnail %}
-
-{% thumbnail blog_post.image "758x240" crop="center" format="JPEG" as im %}
-<img id="mbimg" src="{{ im.url }}" alt="">
-{% endthumbnail %}
-
-{% endblock %}
 {% block body %}
-<div class="mbs">
-  <div class="container">
-    <div class="blogpost">
-      <h1>{{ blog_post.title }}</h1>
-      <div id="blogContent">
-        {{ blog_post.content|linebreaks }}
-      </div>
+<div class="single-post-container">
+    <h1>{{ blog_post.title }}</h1>
+    <p>{{ blog_post.lead_paragraph }}</p>
+    <!--- Banner -->
+    <picture>
+        {% thumbnail blog_post.image "1010x500" crop="center" format="JPEG" as im %}
+        <source media="(min-width:1010px)" srcset="{{ im.url }}">
+        {% endthumbnail %}
+        {% thumbnail blog_post.image "650x445" crop="center" format="JPEG" as im_m %}
+        <source media="(min-width:650px)" srcset="{{ im_m.url }}">
+        {% endthumbnail %}
+        {% thumbnail blog_post.image "650x445" crop="center" format="JPEG" as im_sm %}
+        <img src="{{ im_sm.url }}" alt="{{ blog_post.image_desc }}">
+        {% endthumbnail %}
+
+        {% if blog_post.image_desc %}
+        <p>{{ blog_post.image_desc }}</p>
+        {% endif %}
+    </picture> 
+    <div class="justify-text">
+      {{ blog_post.content.html|safe }}
     </div>
-    {% if youtube %}
-    <div class="youtube">
-      <div class="youtube-grid">
-        <iframe src="https://www.youtube.com/embed/{{ youtube }}"
-        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-  {% endif %}
-  </div>
 </div>
+
 {% endblock %}
 {% block footer %}
-
-<!--- Blog JS --->
-<script src="{% static '/js/blog.js' %}"></script>
 
 {% endblock %}

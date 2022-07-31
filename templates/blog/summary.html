@@ -4,79 +4,35 @@
 {% block extra_head %}
 {% load thumbnail %}
 
-<meta name="title" content="Blog - Regelmäßige Artikel rund um die Musikschule St. Pölten">
-<meta name="description" content="Ab sofort werden hier in regelmäßigen Abständen Blog-Einträge rund um die Musik- und Kunstschule online gestellt.">
+<meta name="title" content="Blog - Regelmäßige Artikel rund um das Festival Musica Sacra">
+<meta name="description" content="Ab sofort werden hier in regelmäßigen Abständen Blog-Einträge rund um das Musik Festival Musica Sacra online gestellt.">
 
-<style media="screen">
-  .mti img {
-    max-width: 75%;
-    height: auto;
-  }
-  .tmcb {
-    min-height: 520px;
-    grid-template-areas: 'mti mti';
-  }
-  @media only screen and (max-width: 1080px) {
-    .tmcb {
-      grid-template-areas:
-      'mti';
-    }
-  }
-  @media only screen and (max-width: 410px) {
-    .container {
-      padding-left: 0px;
-      padding-right: 0px;
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    .tmcb {
-      width: 100%;
-    }
-  }
-</style>
 
 {% endblock %}
 
-{% block navbar %}
-{% endblock %}
-{% block banner %}
-
-{% endblock %}
 {% block body %}
-<div class="mbs">
-  <div class="container">
-    <h1>Blog Einträge</h1>
-    <div class="tmcon">
-      <div class="tmcb">
-        {% for blog in all_blogs %}
-        <div class="tmcbpb">
-          <div class="mti">
-            <a href="{{blog.published_year}}/{{ blog.slug }}">
-              <h2>{{ blog.title }}</h2>
-              <picture>
-                {% thumbnail blog.image "400x300" crop="center" format="WEBP" as im %}
-                <source srcset="{{ im.url }}" type="image/webp">
-                {% endthumbnail %}
-                {% thumbnail blog.image "400x300" crop="center" format="JPEG" as im %}
-                <source srcset="{{ im.url }}" type="image/jpeg">
-                <img src="{{ im.url }}" 
-                width="{{ im.width }}" 
-                height="{{ im.height }}"
-                alt="{{ blog.image.title }} Beitragsbild"
-                style="width: 100%;height: auto;">
-                {% endthumbnail %}
-              </picture>
-            </a>
-            <div class="tctm">
-              <p>{{ blog.meta_description|linebreaks  }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-  {% endblock %}
-  {% block footer %}
 
-  {% endblock %}
+<h1>Blog Beiträge</h1>
+
+{% if all_blogs %}
+<div class="blog-index-grid">
+    {% for blog in all_blogs %}
+    <a href="blog/{{blog.published_year}}/{{blog.slug}}">
+    <div {% if blog.image %} 
+    {% thumbnail blog.image "700" crop="center" format="JPEG" as im %} 
+    style="background: url({{ im.url }});"
+    {% endthumbnail %}
+    {% endif %}>
+    </div>
+    <h3>{{ blog.title }}</h3>
+    <p><b>{{ blog.date }}:</b> {{ blog.meta_description|truncatewords:30 }}</p>
+    </a>
+    {% endfor %}
+</div>
+{% else %}
+<p>Derzeit befinden sich noch keine Einträge in unserer Datenbank.</p>
+{% endif %}
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

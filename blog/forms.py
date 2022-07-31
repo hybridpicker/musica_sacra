@@ -7,5 +7,5 @@ class ArticleForm(forms.ModelForm):
     content = QuillFormField()
     class Meta:
         model = BlogPost
-        fields = ['content', 'image', 'title', 'lead_paragraph', 
+        fields = ['content', 'image', 'image_desc', 'title', 'lead_paragraph', 
                   'meta_title', 'meta_description']

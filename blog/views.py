@@ -76,7 +76,7 @@ def create_blog(request):
 class BlogPostView(View):
     def get(self, request, *args, **kwargs):
         blog_post = get_object_or_404(BlogPost, slug=kwargs['slug'], published_year=kwargs['published_year'])
-        youtube = check_youtube_link(blog_post.content)
+        youtube = check_youtube_link(blog_post.content.html)
         if youtube:
             context = {'blog_post': blog_post, 'youtube':youtube}
         else:
