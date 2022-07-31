@@ -663,12 +663,14 @@ main.musica-container .blog-index-grid > a{
     margin-bottom: 0;
 }
 @media only screen and (max-width: 1010px) {
-    .single-event-container > picture > *{
+    .single-event-container > picture > *,
+    .single-post-container > picture > *{
         max-width: 650px;
     }
 }
 @media only screen and (max-width: 650px) {
-    .single-event-container > picture > *{
+    .single-event-container > picture > *,
+    .single-post-container > picture > *{
         max-width: 92vw;
     }
 }
