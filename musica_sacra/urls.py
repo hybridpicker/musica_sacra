@@ -6,6 +6,8 @@ import events.views
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.conf.urls import handler404, handler500
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home.views.home, name='home_view'),
@@ -23,3 +25,6 @@ urlpatterns = [
     path('<published_year>/<slug>/', events.views.EventView.as_view(), name='event_detail'),
     re_path(r'^eventedit/', include('events.edit_urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'home.views.view_404'
+handler500 = 'home.views.view_500'
