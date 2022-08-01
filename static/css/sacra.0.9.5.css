@@ -138,6 +138,11 @@ header .mobileSacraNav, header .mobileSacraNav ul.nav{
         top: 2rem;
     }
 }
+@media only screen and (max-width: 350px){
+    #sacraHamburger{
+        left: 1.2rem;
+    }
+}
 @media only screen and (max-width: 525px) {
     header.py-4{
         padding-top: 1rem !important;
@@ -262,7 +267,11 @@ footer .copyright{
   
 .sacra-event-date, .sacra-event-time {
     padding-right: 2%; }
-  
+
+@media only screen and (max-width: 400px) {
+    .sacra-event-date, .sacra-event-time {
+        margin-left: 0; }
+}
 .sacra-event-venue {
     grid-area: sacra-event-venue; }
   
@@ -290,6 +299,17 @@ footer .copyright{
     }
     .event-container{
         grid-template-columns: 1fr 3fr;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .sacra-event-title > h2,
+    .sacra-event-date > h2{
+        font-size: 1.2rem;
+    }
+    .all-events-container p,
+    .all-events-container a {
+        font-size: 1rem;
+        line-height: 1.2rem;
     }
 }
 /* Prices Site */
@@ -384,7 +404,7 @@ footer .copyright{
 }
 @media only screen and (max-width: 750px) {
     .prices-sacra-grid{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 0.5fr);
         grid-template-rows: repeat(5, 0.5fr);
         padding: 1rem;
     }
@@ -835,7 +855,7 @@ form ul.errorlist li{
     background: transparent;
     height: 20rem;
     border-radius: 100%;
-    width: 20rem;
+    max-width: 20rem;
     margin-left: auto;
     margin-right: auto;
     background-position: center !important;
@@ -899,5 +919,24 @@ main.musica-container .blog-index-grid > a{
     }
     .events-index-grid{
         gap: 2rem;
+    }
+}
+@media only screen and (max-width: 375px) {
+    p, a, li, ul{
+        font-size: 5vw;
+        line-height: 7vw;
+        padding-left: 0;
+    }
+    h2{
+        font-size: 7vw;
+    }
+    h3{
+        font-size: 6vw;
+    }
+    footer .copyright{
+        font-size: 5vw !important;
+    }
+    main{
+        margin-bottom: 0;
     }
 }

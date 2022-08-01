@@ -17,7 +17,7 @@
 {% if all_blogs %}
 <div class="blog-index-grid">
     {% for blog in all_blogs %}
-    <a href="blog/{{blog.published_year}}/{{blog.slug}}">
+    <a href="{{blog.published_year}}/{{blog.slug}}">
     <div {% if blog.image %} 
     {% thumbnail blog.image "700" crop="center" format="JPEG" as im %} 
     style="background: url({{ im.url }});"
