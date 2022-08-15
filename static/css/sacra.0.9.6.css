@@ -161,10 +161,10 @@ header .mobileSacraNav, header .mobileSacraNav ul.nav{
 footer{
     padding-bottom: 3rem;
 }
-footer a img{
+footer .copyright a img{
     width: 2.5rem;
 }
-footer a{
+footer .copyright a{
     margin: 2rem;
     text-decoration: unset;
     font-weight: unset;
@@ -427,7 +427,8 @@ footer .copyright{
     display: grid;
     margin-bottom: 2rem;
 }
-.footer-grid-sacra > img{
+.footer-grid-sacra > img,
+.footer-grid-sacra > a > img {
     max-width: 12rem;
     height: 2rem;
     margin-left: auto;
