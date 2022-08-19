@@ -219,7 +219,8 @@ footer .copyright{
     grid-template-areas: "sacra-event-date sacra-event-title" "sacra-event-time sacra-event-venue";
     margin-bottom: 4rem; 
 }
-.event-container.Konzert > .sacra-event-title{
+.event-container.Konzert > .sacra-event-title,
+.event-container.Konzert > .sacra-event-title a > h2{
     color: #088A52;
 }
 .event-container.Gottesdienst > .sacra-event-title{
@@ -247,7 +248,8 @@ footer .copyright{
     grid-area: sacra-event-title; }
   
 .sacra-event-title > h2,
-.sacra-event-title > h3 {
+.sacra-event-title > h3,
+.sacra-event-title > a > h2 {
     text-align: left;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -290,7 +292,8 @@ footer .copyright{
     
 @media only screen and (max-width: 580px) {
     .sacra-event-title > h2,
-    .sacra-event-date > h2{
+    .sacra-event-title > a > h2,
+    .sacra-event-date > h2 {
         font-size: 1.5rem;
     }
     .all-events-container p {
@@ -303,6 +306,7 @@ footer .copyright{
 }
 @media only screen and (max-width: 350px) {
     .sacra-event-title > h2,
+    .sacra-event-title > a > h2,
     .sacra-event-date > h2{
         font-size: 1.2rem;
     }
