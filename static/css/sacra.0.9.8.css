@@ -478,7 +478,9 @@ footer > .footer-grid-sacra{
         grid-template-columns: auto;
     }
 }    
-
+footer .social-media > section > a > img{
+    margin: 1rem;
+}
 /* Slider Index */
 slider {
     display: block;
