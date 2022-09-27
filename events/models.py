@@ -53,6 +53,7 @@ class Event(models.Model):
     image = ImageField(_("Beitragsbild"), upload_to='events/images/', null=True, blank=True)
     image_desc = models.TextField(_("Bildbezeichnung"), null=True, blank=True)
     ticket_url = models.URLField(_(u'Ticketseite URL'), blank=True, max_length=80)
+    program_folder = models.FileField(_(u"Programm Folder"), upload_to='events/programm_folder/%Y/%m/%d/', blank=True)
 
     def get_date_presentation(self):
         tp = self.date

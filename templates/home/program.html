@@ -60,6 +60,9 @@
                 {% if event.ticket_url %}
                 <p>Tickets: <a target="_blank" href="{{ event.ticket_url }}">https://oeticket.com</a></p>
                 {% endif %}
+                {% if event.program_folder %}
+                <p>Programmheft: <a target="_blank" href="{{ event.program_folder.url }}">Download</a></p>
+                {% endif %}
               </div>
 
           </div>

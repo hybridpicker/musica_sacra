@@ -51,10 +51,17 @@
     </picture> 
 
     {{ event.content.html|safe }}
-
+    <br>
+    
     {% if event.ticket_url %}
     <h2>KARTEN</h2>
     <p>Karten sind ab sofort online erhältlich unter: <a target="_blank" href="{{ event.ticket_url }}">https://oeticket.com</a></p>
+    <br>
+    {% endif %}
+
+    {% if event.program_folder %}
+    <h2>PROGRAMMHEFT</h2>
+    <p>Das aktuelle Programmheft zu {{ event.content_title }} finden Sie unter diesem Link zum Download: <a target="_blank" href="{{ event.program_folder.url }}">Programmheft</a></p>
     {% endif %}
 </div>
 {% endblock %}
