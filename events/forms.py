@@ -7,6 +7,6 @@ class EventForm(forms.ModelForm):
     content = QuillFormField()
     class Meta:
         model = Event
-        fields = ['name', 'category', 'composer', 'contributing', 'venue', 'date', 
+        fields = ['name', 'category', 'composer', 'contributing', 'venue', 'date', 'time',
                 'text', 'content_title', 'content_lead', 'content', 'image', 'image_desc',
-                'ticket_url']
+                'ticket_url', 'program_folder',]
