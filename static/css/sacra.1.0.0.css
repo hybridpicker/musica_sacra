@@ -511,32 +511,32 @@ slider {
   slide:nth-child(1) {
     left: 0%;
     animation-delay: 0s;
-    background-image: url(/static/img/banner/slideshow/01.jpg);
-    background-image: url(/static/img/banner/slideshow/01.webp);
+    background-image: url(/static/img/banner/slideshow/01_23.jpg);
+    background-image: url(/static/img/banner/slideshow/01_23.webp);
     background-size: cover;
     background-position: top; }
   
   slide:nth-child(2) {
     left: 0%;
     animation-delay: 4.5s;
-    background-image: url(/static/img/banner/slideshow/02.jpg);
-    background-image: url(/static/img/banner/slideshow/02.webp);
+    background-image: url(/static/img/banner/slideshow/02_23.jpg);
+    background-image: url(/static/img/banner/slideshow/02_23.webp);
     background-size: cover;
     background-position: top; }
   
   slide:nth-child(3) {
     left: 0%;
     animation-delay: 9s;  
-    background-image: url(/static/img/banner/slideshow/03.jpg);
-    background-image: url(/static/img/banner/slideshow/03.webp);
+    background-image: url(/static/img/banner/slideshow/03_23.jpg);
+    background-image: url(/static/img/banner/slideshow/03_23.webp);
     background-size: cover;
     background-position: top; }
 
   slide:nth-child(4) {
     left: 0%;
     animation-delay: 13.5s;  
-    background-image: url(/static/img/banner/slideshow/04.jpg);
-    background-image: url(/static/img/banner/slideshow/04.webp);
+    background-image: url(/static/img/banner/slideshow/04_23.jpg);
+    background-image: url(/static/img/banner/slideshow/04_23.webp);
     background-size: cover;
     background-position: top; }
   
