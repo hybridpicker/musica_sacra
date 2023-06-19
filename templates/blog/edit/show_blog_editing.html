@@ -54,7 +54,9 @@
           <div class="mti">
             <a href="post/{{blog.id}}/edit">
               <h3>{{ blog.title }}</h3>
-              <img src="{{ blog.image.url }}" alt="">
+              {% if blog.image %}
+                <img src="{{ blog.image.url }}" alt="">
+              {% endif %}
             </a>
             <div class="tctm">
               <p>{{ blog.meta_description|linebreaks|truncatewords:30   }}</p>
