@@ -29,12 +29,21 @@
 {% endblock %}
 
 {% block slider %}
+<slider id="christmas">
+    <picture style="animation: unset;opacity: 1;">
+        <source srcset="{% static 'img/banner/slideshow/01_christmas.jpg' %}">
+        <img src="i{% static 'img/banner/slideshow/01_christmas.jpg' %}" alt="">
+    </picture> 
+</slider>
+<!--
 <slider id="homebanner">
     <slide><p></p></slide>
     <slide><p></p></slide>
     <slide><p></p></slide>
     <slide><p></p></slide>
+
 </slider>
+--->
 {% endblock %}
 
 {% block body %}
