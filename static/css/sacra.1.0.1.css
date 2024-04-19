@@ -37,16 +37,16 @@ bold{
     font-weight: bold;
 }
 main.musica-container a{
-    color: #12a086 !important;
+    color: #01a5df !important;
 }
 body > .cover-container{
     max-width: 2200px;
 }
 a:hover{
-    color: #12a086 !important;
+    color: #01a5df !important;
 }
 #crossburger circle{
-    fill: #12a086;
+    fill: #01a5df;
 }
 .nav .nav-link{
     font-family: 'Uniform', sans-serif;
@@ -69,7 +69,7 @@ a:hover{
     background-color: unset;
 }
 #navMobileItems .nav-link.active{
-    color: #dfc353 !important;
+    color: #e94d1a !important;
 }
 header ul.nav-pills{
     margin-top: 1.5rem;
@@ -174,8 +174,8 @@ footer .copyright a{
     margin: unset;
 }
 header{
-    background: url("/static/img/bg/header_bg_23.png");
-    background: url("/static/img/bg/header_bg_23.webp");
+    background: url("/static/img/bg/header_bg_24.png");
+    background: url("/static/img/bg/header_bg_24.webp");
     background-position: center;
     background-repeat: inherit;
     max-height: 6.5rem;
@@ -221,10 +221,10 @@ footer .copyright{
 }
 .event-container.Konzert > .sacra-event-title,
 .event-container.Konzert > .sacra-event-title a > h2{
-    color: #973e0d;
+    color: #f8c8df;
 }
 .event-container.Gottesdienst > .sacra-event-title{
-    color: #dfc353;
+    color: #e94d1a;
 }
 .banner {
     grid-area: banner; }
@@ -394,13 +394,13 @@ footer .copyright{
     justify-content: center;
 }
 .prices-circle-section .circle.green{
-    background-color: #973e0d;
+    background-color: #f8c8df;
 }
 .prices-circle-section .circle.blue{
-    background-color: #dfc353;
+    background-color: #e94d1a;
 }
 .prices-circle-section .circle.yellow{
-    background-color: #12a086;
+    background-color: #01a5df;
 }
 .circle{
     font-family: 'Uniform', sans-serif;
@@ -622,7 +622,7 @@ slider {
     margin-bottom: 2rem;
 }
 .events-index-grid > a > div{
-    background: #973e0d;
+    background: #f8c8df;
     height: 20rem;
     padding-top: 1rem;
     background-position: center !important;
@@ -631,7 +631,7 @@ main.musica-container .events-index-grid > a,
 main.musica-container .blog-index-grid > a{
     color: white !important;
     text-decoration: none;
-    background: #12a086;
+    background: #01a5df;
 }
 main.musica-container .blog-index-grid > a{
     background: transparent;
@@ -643,7 +643,7 @@ main.musica-container .blog-index-grid > a{
     margin-bottom: 1rem;
 }
 .circle-event{
-    background: #973e0d;
+    background: #f8c8df;
     width: 6rem;
     height: 6rem;
     border-radius: 4rem;
@@ -658,7 +658,7 @@ main.musica-container .blog-index-grid > a{
 }
 .event-title-index-grid h3{
     text-transform: uppercase;
-    background: #973e0d;
+    background: #f8c8df;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
@@ -889,7 +889,7 @@ main.musica-container .blog-index-grid > a{
 }
 .blog-title-index-grid h3{
     text-transform: uppercase;
-    background: #973e0d;
+    background: #f8c8df;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
