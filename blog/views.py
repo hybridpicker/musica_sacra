@@ -42,11 +42,11 @@ def check_youtube_link(content):
     else:
         return False
 
-@login_required(login_url='/team/login/')
+@login_required(login_url='/intern/login/')
 def blog_thanks(request):
     return render(request, "blog/form_thanks.html")
 
-@login_required(login_url='/team/login/')
+@login_required(login_url='/intern/login/')
 def show_blogs_editing(request):
     all_blogs = BlogPost.objects.all().order_by("date").reverse()
     context = {
@@ -54,7 +54,7 @@ def show_blogs_editing(request):
         }
     return render(request, "blog/edit/show_blog_editing.html", context)
 
-@login_required(login_url='/team/login/')
+@login_required(login_url='/intern/login/')
 def create_blog(request):
     form = ArticleForm()
     if request.method == 'POST':
