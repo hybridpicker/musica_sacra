@@ -12,7 +12,7 @@ from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 
-@login_required(login_url='/team/login/')
+@login_required(login_url='/intern/login/')
 def change_password(request):
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
@@ -29,7 +29,7 @@ def change_password(request):
         'form': form
     })
 
-@login_required(login_url='/team/login/')
+@login_required(login_url='/intern/login/')
 def change_password_success(request):
     return render(request, 'registration/password_change_success.html',)
 
