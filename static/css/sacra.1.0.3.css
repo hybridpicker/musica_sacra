@@ -354,6 +354,9 @@ footer .copyright{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+.prices-sacra-grid.d{
+    grid-template-rows: repeat(3, 0.5fr);
+}
 
 .prices-sacra-grid > div{
     text-align: left;
@@ -380,6 +383,9 @@ footer .copyright{
 .single-price-section { grid-area: 3 / 4 / 4 / 6; }
 .single-price-desc { grid-area: 4 / 2 / 5 / 6; }
 
+.prices-abo-section.d { grid-area: 2 / 2 / 2 / 4; }
+.abo-price-section.d {grid-area: 2 / 4 / 2 / 6; }
+
 .prices-circle-section .circle{
     border-radius: 50%;
     width: 6rem;
@@ -402,6 +408,9 @@ footer .copyright{
 .prices-circle-section .circle.yellow{
     background-color: #01a5df;
 }
+.prices-circle-section .circle.black{
+    background-color: black;
+}
 .circle{
     font-family: 'Uniform', sans-serif;
     font-weight: bold;
@@ -412,6 +421,10 @@ footer .copyright{
         grid-template-rows: repeat(5, 0.5fr);
         padding: 1rem;
     }
+    .prices-sacra-grid.d{
+        grid-template-rows: repeat(2, 0.5fr);
+    }
+
     .prices-circle-section { grid-area: 1 / 1 / 2 / 6; }
     .prices-abo-section { grid-area: 2 / 1 / 3 / 4; }
     .abo-price-section { grid-area: 2 / 4 / 3 / 5; }
@@ -419,6 +432,9 @@ footer .copyright{
     .prices-single-section { grid-area: 4 / 1 / 5 / 4; }
     .single-price-section { grid-area: 4 / 4 / 5 / 5; }
     .single-price-desc { grid-area: 5 / 1 / 6 / 5;}
+
+    .prices-abo-section.d { grid-area: 2 / 2 / 3 / 4; }
+    .prices-abo-section.d { grid-area: 2 / 1 / 3 / 4; }
 }
 .sales p{
     margin-bottom: 0;
