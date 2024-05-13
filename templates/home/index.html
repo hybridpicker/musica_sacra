@@ -71,9 +71,13 @@
 <div class="events-index-grid">
     {% for event in events%}
     <a href="/{{event.published_year}}/{{event.slug}}">
-    <div {% if event.image %} 
-    {% thumbnail event.image "950" crop="center" format="JPEG" as im %} 
-    style="background: url({{ im.url }});"
+    <div {% if event.image_thumb %}
+    {% thumbnail event.image_thumb "950x950" crop="center" format="JPEG" as im %}
+        style="background: url({{ im.url }}); background-size: cover; background-position: center;"
+    {% endthumbnail %}
+    {% elif event.image %}
+    {% thumbnail event.image "950x950" crop="center" format="JPEG" as im %}
+        style="background: url({{ im.url }}); background-size: cover; background-position: center;"
     {% endthumbnail %}
     {% endif %}>
     </div>
