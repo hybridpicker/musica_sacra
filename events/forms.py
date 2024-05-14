@@ -8,5 +8,5 @@ class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         fields = ['name', 'category', 'composer', 'contributing', 'venue', 'date', 'time',
-                'text', 'content_title', 'content_lead', 'content', 'image', 'image_desc',
+                'text', 'content_title', 'content_lead', 'content', 'image', 'image_desc', 'image_thumb',
                 'ticket_url', 'program_folder',]
