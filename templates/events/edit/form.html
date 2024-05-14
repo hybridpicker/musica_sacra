@@ -63,15 +63,17 @@
 </div>
 {% endblock %}
 {% block footer %}
-<script  type="text/javascript">
-  /* Find Parent Element for Image Form */
-  x = document.getElementById("id_image").parentElement
-  if ( x.innerHTML.includes('</a>') ){
-    x.classList.add("image-form-grid");
+<script type="text/javascript">
+  function addClassIfContainsLink(elementId) {
+    var element = document.getElementById(elementId).parentElement;
+    if (element.innerHTML.includes('</a>')) {
+      element.classList.add("image-form-grid");
+    }
   }
-  x = document.getElementById("id_program_folder").parentElement
-  if ( x.innerHTML.includes('</a>') ){
-    x.classList.add("image-form-grid");
-  }
+
+  addClassIfContainsLink("id_image");
+  addClassIfContainsLink("id_program_folder");
+  addClassIfContainsLink("id_image_thumb");
 </script>
+
 {% endblock %}
