@@ -26,7 +26,6 @@
 <meta name="twitter:image" content="{% static 'meta/sacra.jpg' %}">
 {% endblock %}
 
-
 {% block body %}
 <h1>Karten & Festival-Pass</h1>
 
@@ -34,7 +33,7 @@
     <div class="prices-circle-section">
         <div class="circle green">A</div>
     </div>
-    <div class="prices-abo-section"><p><bold>Festival-Pass</bold></p></div>
+    <div class="prices-abo-section"><p><bold>Festival-Pass</bold> <sup>*</sup></p></div>
     <div class="abo-price-section"><p><bold>150,- EUR</bold></p></div>
     <div class="abo-price-desc"><p>5 Konzerte (inkl. Sitzplatz)</p></div>
 
@@ -62,7 +61,7 @@
     <div class="prices-circle-section">
         <div class="circle yellow">C</div>
     </div>
-    <div class="prices-abo-section"><p><bold>Festival-Pass</bold></p></div>
+    <div class="prices-abo-section"><p><bold>Festival-Pass</bold> <sup>*</sup></p></div>
     <div class="abo-price-section"><p><bold>70,- EUR</bold></p></div>
     <div class="abo-price-desc"><p>5 Konzerte (inkl. Sitzplatz mit Sichteinschränkung)</p></div>
 
@@ -72,19 +71,23 @@
 
 </div>
 
-
 <div class="prices-sacra-grid d">
     <div class="prices-circle-section">
         <div class="circle black">D</div>
     </div>
     <div class="prices-abo-section d"><p><bold>Einzelkarte</bold></p></div>
     <div class="abo-price-section d"><p><bold>5,- EUR</bold></p></div>
+    <div class="abo-price-desc"><p>Kinderkonzerte</p></div>
 
 </div>
 
+<ul style="text-align: left;">
+    <li><sup>*</sup> Für die Konzerte am 14. und 15. September ist nur Kategorie B verfügbar.</li>
+</ul>
+
 <h2>Ermässigungen</h2>
     <ul>
-        <li>− 50%: Schüler, Studenten</li>
+        <li>− 50%: Schüler, Studenten</li>
         <li>− 10 % Ö1 Club-Mitglieder</li>
     </ul>
     <p>Nur eine Ermäßigung pro Ticket möglich.</p>
@@ -116,5 +119,4 @@
     
 {% endblock %}
 {% block footer %}
-
 {% endblock %}
