@@ -828,46 +828,7 @@ form ul.errorlist li{
     min-height: 20rem;
 }
 /* Image Form Edit Styling */
-/*
-.image-form-grid{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 1rem;
-}
-.image-form-grid{
-    text-align: left;
-}
-.image-form-grid > label[for=id_image]{
-    text-align: left;
-    grid-area: 1 / 1 / 2 / 6;
-}
-.image-form-grid > label[for=image-clear_id]{
-    grid-area: 3 / 1 / 4 / 2;
-}
-.image-form-grid > #image-clear_id{
-    grid-area: 3 / 2 / 4 / 3;
-}
-.image-form-grid-blog{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1rem;
-}
-.image-form-grid-blog{
-    text-align: left;
-}
-.image-form-grid-blog > label[for=id_image]{
-    text-align: left;
-    grid-area: 1 / 1 / 2 / 6;
-}
-.image-form-grid-blog > label[for=image-clear_id]{
-    grid-area: 2 / 1 / 4 / 2;
-}
-.image-form-grid-blog > #image-clear_id{
-    grid-area: 2 / 2 / 4 / 3;
-}
-*/
+
 .image-form-grid,
 .image-form-grid-blog {
     display: grid;
