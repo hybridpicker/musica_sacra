@@ -1,19 +1,41 @@
 from django.shortcuts import render, redirect
-from events.models import Event
+from events.models import Event, EventCategory
 from blog.models import BlogPost
 from home.models import IndexText
 from home.forms import IndexTextForm
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
-def home (request):
-    events = Event.objects.all().filter(category__name="Konzert")
+from django.shortcuts import render
+
+def home(request):
+    try:
+        # Attempt to find the "Konzert" category
+        concert_category = EventCategory.objects.get(name="Konzert")
+    except EventCategory.DoesNotExist:
+        # If it does not exist, use the first available category
+        concert_category = EventCategory.objects.first()
+
+    if concert_category:
+        # Filter events by the found category
+        events = Event.objects.filter(category=concert_category)
+    else:
+        # No events if no category is found
+        events = Event.objects.none()
+
+    # Fetch the latest 6 blog posts
     blog_content = BlogPost.objects.all()[0:6]
+    # Fetch the first instance of index text
     index_text = IndexText.objects.all().first()
-    context = { 'events': events ,
-                'blog_content': blog_content,
-                'index_text': index_text,}
-    return render (request, 'home/index.html', context)
+    
+    # Create the context to pass to the template
+    context = {
+        'events': events,
+        'blog_content': blog_content,
+        'index_text': index_text,
+    }
+    
+    # Render the template with the given context
+    return render(request, 'home/index.html', context)
 
 def contact (request):
     return render (request, 'home/contact.html')
