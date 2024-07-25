@@ -36,6 +36,10 @@
     <p>{{ blog_post.lead_paragraph }}</p>
     <!--- Banner -->
     <picture>
+        {% if blog_post.image %}
+        <img src="{{ blog_post.image.url }}" alt="{{ blog_post.image_desc }}">
+        {% endif %}
+        <!--
         {% thumbnail blog_post.image "1010x500" crop="center" format="JPEG" as im %}
         <source media="(min-width:1010px)" srcset="{{ im.url }}">
         {% endthumbnail %}
@@ -45,6 +49,7 @@
         {% thumbnail blog_post.image "650x445" crop="center" format="JPEG" as im_sm %}
         <img src="{{ im_sm.url }}" alt="{{ blog_post.image_desc }}">
         {% endthumbnail %}
+        -->
 
         {% if blog_post.image_desc %}
         <p>{{ blog_post.image_desc }}</p>
