@@ -81,14 +81,12 @@
         style="background: url({{ blog.image.url }});"
     {% endif %}>
     </div>
-    <!--
     <div {% if blog.image %} 
     {% thumbnail blog.image "700" crop="center" format="JPEG" as im %} 
     style="background: url({{ im.url }});"
     {% endthumbnail %}
     {% endif %}>
     </div>
-    -->
     <h3>{{ blog.title }}</h3>
     <p>{{ blog.meta_description|truncatewords:30 }}</p>
     </a>
