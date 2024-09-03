@@ -78,6 +78,6 @@ class Event(models.Model):
         '''
         Meta class for Event
         '''
-        ordering = ('date',)
+        ordering = ('date', 'time')
         verbose_name = u'Event'
         verbose_name_plural = u'Events' 
