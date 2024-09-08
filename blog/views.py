@@ -60,6 +60,9 @@ def create_blog(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = ArticleForm(request.POST, request.FILES)
+        if request.FILES:
+            print(f"Dateien hochgeladen: {request.FILES}")  # Gibt die hochgeladenen Dateien aus
+
         # check whether it's valid:
         if form.is_valid():
             blog = form.save(commit=False)
@@ -72,6 +75,7 @@ def create_blog(request):
         'form': form
         }
     return render(request, "blog/edit/form.html", context)
+
 
 class BlogPostView(View):
     def get(self, request, *args, **kwargs):
