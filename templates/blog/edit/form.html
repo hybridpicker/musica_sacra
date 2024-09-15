@@ -47,7 +47,7 @@
         {% for error in form.non_field_errors %}
             <div class="alert alert-error">
               <p>
-                <strong>{{ field.label }}: </strong>{{ error|escape }}
+                <strong>Allgemeiner Fehler:</strong> {{ error|escape }}
               </p>
             </div>
         {% endfor %}
@@ -85,11 +85,15 @@
 </div>
 {% endblock %}
 {% block footer %}
-<script  type="text/javascript">
-  /* Find Parent Element for Image Form */
-  x = document.getElementById("id_image").parentElement
-  if ( x.innerHTML.includes('</a>') ){
-    x.classList.add("image-form-grid-blog");
-  }
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    var imageField = document.getElementById("id_image");
+    if (imageField) {
+      var parentElement = imageField.parentElement;
+      if (parentElement.innerHTML.includes('</a>')) {
+        parentElement.classList.add("image-form-grid-blog");
+      }
+    }
+  });
 </script>
 {% endblock %}
