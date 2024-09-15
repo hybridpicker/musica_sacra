@@ -47,11 +47,11 @@
         {% for error in form.non_field_errors %}
             <div class="alert alert-error">
               <p>
-                <strong>{{ field.label }}: </strong>{{ error|escape }}
+                <strong>Allgemeiner Fehler: </strong>{{ error|escape }}
               </p>
             </div>
         {% endfor %}
-      {% endif %}  
+      {% endif %}
       {{ form.as_p }}
 
       <a>
@@ -65,15 +65,20 @@
 {% block footer %}
 <script type="text/javascript">
   function addClassIfContainsLink(elementId) {
-    var element = document.getElementById(elementId).parentElement;
-    if (element.innerHTML.includes('</a>')) {
-      element.classList.add("image-form-grid");
+    var element = document.getElementById(elementId);
+    if (element) {
+      var parentElement = element.parentElement;
+      if (parentElement.innerHTML.includes('</a>')) {
+        parentElement.classList.add("image-form-grid");
+      }
     }
   }
 
-  addClassIfContainsLink("id_image");
-  addClassIfContainsLink("id_program_folder");
-  addClassIfContainsLink("id_image_thumb");
+  document.addEventListener("DOMContentLoaded", function() {
+    addClassIfContainsLink("id_image");
+    addClassIfContainsLink("id_program_folder");
+    addClassIfContainsLink("id_image_thumb");
+  });
 </script>
 
 {% endblock %}
