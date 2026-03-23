@@ -1,6 +1,6 @@
 asgiref==3.4.1
 certifi==2021.5.30
-Django==3.2
+Django==4.2.29
 django-allauth
 django-quill-editor
 pillow
