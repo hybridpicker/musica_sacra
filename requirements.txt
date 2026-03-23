@@ -7,5 +7,5 @@ pillow
 sorl-thumbnail
 psycopg2-binary
 pytz==2022.1
-sqlparse==0.4.2
+sqlparse==0.5.4
 typing_extensions==4.1.1
